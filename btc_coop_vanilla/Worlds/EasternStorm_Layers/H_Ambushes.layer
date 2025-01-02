@@ -1,0 +1,832 @@
+GenericEntity Area6 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 6615.723 91.502 5724.672
+ {
+  $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+   Ambush1 {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer4 {
+       coords 468.248 25.762 -316.167
+       {
+        GenericEntity Layer11 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+         components {
+          SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+           m_eActivationType ON_TRIGGER_ACTIVATION
+          }
+         }
+         coords 0 0 0
+         {
+          $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+           SlotAI50 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{22F33D3EC8F281AB}Prefabs/Groups/INDFOR/Group_FIA_MachineGunTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint9"
+               }
+              }
+             }
+            }
+            coords 44.651 3.724 3.758
+           }
+           SlotAI61 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint9"
+               }
+              }
+             }
+            }
+            coords -115.75 -4.457 -33.48
+           }
+           SlotAI62 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint9"
+               }
+              }
+             }
+            }
+            coords -23.012 -1.666 56.935
+           }
+          }
+          $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+           Slot25 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 64.793 1.799 22.501
+            angleY 138.197
+           }
+           Slot26 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 65.099 2.018 18.348
+            angleY 50.981
+           }
+           Slot27 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 69.076 1.978 21.963
+            angleY -143.242
+           }
+          }
+          GenericEntity SlotWaypoint9 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6324BBEE1F354A55}" {
+             }
+            }
+           }
+           coords -6.549 -0.323 5.554
+          }
+         }
+        }
+        GenericEntity SlotPlayerTrigger1 : "{D183AFE8DAF9793D}Prefabs/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+         components {
+          SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+             m_fAreaRadius 120
+             m_bOnce 1
+            }
+           }
+           m_aTriggerActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{6324BBEE52C56DF0}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "Layer11"
+             }
+            }
+           }
+          }
+         }
+         coords 1.878 0.057 0.029
+        }
+       }
+      }
+      Layer14 {
+       coords -115.484 70.091 722
+       {
+        GenericEntity Layer12 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+         components {
+          SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+           m_eActivationType ON_TRIGGER_ACTIVATION
+          }
+         }
+         coords 0 0 0
+         {
+          $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+           SlotAI60 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{22F33D3EC8F281AB}Prefabs/Groups/INDFOR/Group_FIA_MachineGunTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint21"
+               }
+              }
+             }
+            }
+            coords 58.607 -6.165 -116.725
+           }
+           SlotAI63 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint21"
+               }
+              }
+             }
+            }
+            coords -46.682 2.548 80.385
+           }
+           SlotAI64 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint21"
+               }
+              }
+             }
+            }
+            coords 125.38 -8.675 162.964
+           }
+           SlotAI66 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint23"
+               }
+              }
+             }
+            }
+            coords 80.798 -3.082 -73.216
+           }
+          }
+          $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+           Slot14 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et"
+             }
+            }
+            coords 79.919 -3.11 -73.519
+            angleY -70.831
+           }
+           Slot23 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords -79.571 -1.004 106.201
+            angleY 50.981
+           }
+           Slot22 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords -79.877 -1.223 110.354
+            angleY 138.197
+           }
+           Slot24 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords -75.594 -1.044 109.815
+            angleY -143.242
+           }
+          }
+          $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+           SlotWaypoint21 {
+            components {
+             SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+              m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6324BBEE1F354A55}" {
+              }
+             }
+            }
+            coords -35.547 0.224 -3.674
+           }
+           SlotWaypoint23 {
+            components {
+             SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+              m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{632534A246F0CD3B}" {
+              }
+             }
+            }
+            coords 80.53 -3.142 -73.859
+           }
+          }
+         }
+        }
+        GenericEntity SlotPlayerTrigger3 : "{D183AFE8DAF9793D}Prefabs/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+         components {
+          SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+             m_fAreaRadius 120
+             m_bOnce 1
+            }
+           }
+           m_aTriggerActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{6324BBEE52C56DF0}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "Layer12"
+             }
+            }
+           }
+          }
+         }
+         coords 1.878 0.057 0.029
+        }
+       }
+      }
+     }
+    }
+   }
+   Ambush2 {
+    coords -33.435 -5.152 -510.675
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer16 {
+       coords 17.261 2.798 38.302
+       {
+        GenericEntity Layer15 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+         components {
+          SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+           m_eActivationType ON_TRIGGER_ACTIVATION
+          }
+         }
+         coords 0 0 0
+         {
+          $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+           SlotAI65 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{22F33D3EC8F281AB}Prefabs/Groups/INDFOR/Group_FIA_MachineGunTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint22"
+               }
+              }
+             }
+            }
+            coords 114.395 3.164 74.317
+           }
+           SlotAI67 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint22"
+               }
+              }
+             }
+            }
+            coords -130.221 -1.289 -36.053
+           }
+           SlotAI68 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{2CC26054775FBA2C}Prefabs/Groups/INDFOR/Group_FIA_Team_AT.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint22"
+               }
+              }
+             }
+            }
+            coords 106.58 -1.608 -69.87
+           }
+           SlotAI72 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint25"
+               }
+              }
+             }
+            }
+            coords 110.576 2.879 13.835
+           }
+          }
+          $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+           Slot19 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et"
+             }
+            }
+            coords 102.09 1.352 9.062
+            angleY -96.785
+           }
+           Slot28 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 115.583 3.833 18.66
+            angleY 138.197
+           }
+           Slot29 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 115.351 3.396 13.13
+            angleY 50.981
+           }
+           Slot30 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 119.328 4.138 16.745
+            angleY -143.242
+           }
+          }
+          $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+           SlotWaypoint22 {
+            components {
+             SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+              m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6324BBEE1F354A55}" {
+              }
+             }
+            }
+            coords -6.549 -0.323 5.554
+           }
+           SlotWaypoint25 {
+            components {
+             SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+              m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{632534A0D64E2AFF}" {
+              }
+             }
+            }
+            coords 103.383 1.749 9.55
+           }
+          }
+         }
+        }
+        GenericEntity SlotPlayerTrigger2 : "{D183AFE8DAF9793D}Prefabs/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+         components {
+          SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+             m_fAreaRadius 120
+             m_bOnce 1
+            }
+           }
+           m_aTriggerActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{6324BBEE52C56DF0}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "Layer15"
+             }
+            }
+           }
+          }
+         }
+         coords 1.878 0.057 0.029
+        }
+       }
+      }
+      Layer18 {
+       coords -657.244 76.992 1574.519
+       {
+        GenericEntity Layer17 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+         components {
+          SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+           m_eActivationType ON_TRIGGER_ACTIVATION
+          }
+         }
+         coords 0 0 0
+         {
+          $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+           SlotAI69 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{22F33D3EC8F281AB}Prefabs/Groups/INDFOR/Group_FIA_MachineGunTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint24"
+               }
+              }
+             }
+            }
+            coords 135.688 2.039 -117.232
+           }
+           SlotAI70 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint24"
+               }
+              }
+             }
+            }
+            coords 66.32 10.265 18.147
+           }
+           SlotAI71 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint24"
+               }
+              }
+             }
+            }
+            coords -34.743 -9.965 -39.076
+           }
+          }
+          $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+           Slot31 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 97.36 3.433 -39.039
+            angleY -143.242
+           }
+           Slot32 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 93.615 3.459 -37.124
+            angleY 138.197
+           }
+           Slot33 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 93.383 2.721 -42.654
+            angleY 50.981
+           }
+          }
+          GenericEntity SlotWaypoint24 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6324BBEE1F354A55}" {
+             }
+            }
+           }
+           coords 11.651 -2.007 -13.812
+          }
+         }
+        }
+        GenericEntity SlotPlayerTrigger4 : "{D183AFE8DAF9793D}Prefabs/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+         components {
+          SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+             m_fAreaRadius 120
+             m_bOnce 1
+            }
+           }
+           m_aTriggerActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{6324BBEE52C56DF0}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "Layer17"
+             }
+            }
+           }
+          }
+         }
+         coords 15.863 13.255 -40.222
+        }
+       }
+      }
+     }
+    }
+   }
+   Ambush3 {
+    coords -1019.446 -43.283 -1502.397
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer20 {
+       coords -79.972 -0.235 -79.761
+       {
+        GenericEntity Layer19 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+         components {
+          SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+           m_eActivationType ON_TRIGGER_ACTIVATION
+          }
+         }
+         coords 0 0 0
+         {
+          $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+           SlotAI73 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{22F33D3EC8F281AB}Prefabs/Groups/INDFOR/Group_FIA_MachineGunTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint26"
+               }
+              }
+             }
+            }
+            coords 83.374 -9.229 -94.513
+           }
+           SlotAI74 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint26"
+               }
+              }
+             }
+            }
+            coords -49.823 17.474 88.718
+           }
+           SlotAI75 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint26"
+               }
+              }
+             }
+            }
+            coords 205.106 -19.14 16.97
+           }
+          }
+          $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+           Slot34 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 102.003 -10.737 -106.108
+            angleY 50.981
+           }
+           Slot35 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 105.946 -10.866 -104.258
+            angleY -143.242
+           }
+           Slot36 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 102.235 -10.311 -100.578
+            angleY 138.197
+           }
+          }
+          GenericEntity SlotWaypoint26 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6324BBEE1F354A55}" {
+             }
+            }
+           }
+           coords 2.327 -0.757 -1.697
+          }
+         }
+        }
+        GenericEntity SlotPlayerTrigger5 : "{D183AFE8DAF9793D}Prefabs/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+         components {
+          SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+             m_fAreaRadius 120
+             m_bOnce 1
+            }
+           }
+           m_aTriggerActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{6324BBEE52C56DF0}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "Layer19"
+             }
+            }
+           }
+          }
+         }
+         coords 1.878 0.057 0.029
+        }
+       }
+      }
+      Layer22 {
+       coords -572.625 58.355 523.349
+       {
+        GenericEntity Layer21 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+         components {
+          SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+           m_eActivationType ON_TRIGGER_ACTIVATION
+          }
+         }
+         coords 0 0 0
+         {
+          $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+           SlotAI76 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{22F33D3EC8F281AB}Prefabs/Groups/INDFOR/Group_FIA_MachineGunTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint27"
+               }
+              }
+             }
+            }
+            coords 140.082 11.223 1.317
+           }
+           SlotAI77 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint27"
+               }
+              }
+             }
+            }
+            coords -69.628 -5.04 -3.53
+           }
+           SlotAI78 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint27"
+               }
+              }
+             }
+            }
+            coords 49.428 7.534 -172.6
+           }
+           SlotAI79 {
+            components {
+             SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+              m_sFactionKey "FIA"
+              m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+              m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6324BBEE274A05F3}" {
+               m_aLayerName {
+                "SlotWaypoint28"
+               }
+              }
+             }
+            }
+            coords 70.149 12.392 -57.545
+           }
+          }
+          $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+           Slot20 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et"
+             }
+            }
+            coords 66.76 12.592 -59.506
+            angleY -53.177
+           }
+           Slot37 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 84.521 14.352 -57.551
+            angleY 50.981
+           }
+           Slot38 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 88.498 14.685 -53.936
+            angleY -143.242
+           }
+           Slot39 {
+            components {
+             SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+              m_sObjectToSpawn "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et"
+             }
+            }
+            coords 84.754 14.014 -52.021
+            angleY 138.197
+           }
+          }
+          $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+           SlotWaypoint27 {
+            components {
+             SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+              m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6324BBEE1F354A55}" {
+              }
+             }
+            }
+            coords 7.674 3.056 3.402
+           }
+           SlotWaypoint28 {
+            components {
+             SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+              m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{632534A2547F0E20}" {
+              }
+             }
+            }
+            coords 64.999 11.603 -56.836
+           }
+          }
+         }
+        }
+        GenericEntity SlotPlayerTrigger6 : "{D183AFE8DAF9793D}Prefabs/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+         components {
+          SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+             m_fAreaRadius 120
+             m_bOnce 1
+            }
+           }
+           m_aTriggerActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{6324BBEE52C56DF0}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "Layer21"
+             }
+            }
+           }
+          }
+         }
+         coords 1.878 0.057 0.029
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

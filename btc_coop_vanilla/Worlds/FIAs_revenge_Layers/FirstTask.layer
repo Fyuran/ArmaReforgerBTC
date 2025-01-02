@@ -1,0 +1,57 @@
+GenericEntity Area3 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 5257.507 64.401 5316.667
+ {
+  GenericEntity LayerTaskDestroy1 : "{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTaskDestroy.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskDestroy "{5A6513F41BA457C8}" {
+     m_SpawnChildren RANDOM_ONE
+     m_sFactionKey "FIA"
+     m_sTaskTitle "Destroy enemy ammo truck"
+     m_sTaskDescription "An USSR ammo truck has been spotted in the city of Figari. Destroy it!"
+     m_aTriggerActionsOnFinish {
+      SCR_ScenarioFrameworkActionSpawnObjects "{62FCFEC6E22C9D70}" {
+       m_aNameOfObjectsToSpawnOnActivation {
+        "LayerTaskMove1" "Rinf1" "Layer3" "Rinf2"
+       }
+      }
+     }
+    }
+   }
+   coords 0 0 0
+   {
+    $grp GenericEntity : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
+     SlotDestroy1 {
+      components {
+       SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+        m_sFactionKey "FIA"
+        m_sObjectToSpawn "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et"
+       }
+      }
+      coords 40.806 -3.129 107.67
+      angleY -55.951
+     }
+     SlotDestroy2 {
+      components {
+       SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+        m_sFactionKey "FIA"
+        m_sObjectToSpawn "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et"
+       }
+      }
+      coords -39.596 -0.347 -15.792
+      angleY -148.827
+     }
+     SlotDestroy3 {
+      components {
+       SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+        m_sFactionKey "FIA"
+        m_sObjectToSpawn "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et"
+       }
+      }
+      coords 34.188 2.684 -74.545
+      angleY 32.97
+     }
+    }
+   }
+  }
+ }
+}

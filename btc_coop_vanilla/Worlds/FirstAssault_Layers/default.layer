@@ -1,0 +1,95 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A297F9E52831}" {
+     NavmeshFile "{E1014B625283F344}worlds/MP/Navmeshes/Coop_CombatOps_Eden.nmn"
+    }
+   }
+  }
+ }
+ coords 5529.125 27.471 10036.323
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7114.537 73.832 6407
+}
+SCR_FactionManager FactionManager_USxUSSR : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
+ coords 7114.537 74.535 6404
+ Factions {
+  SCR_Faction "{56B2B46E9AF80999}" {
+   m_bIsPlayable 0
+  }
+ }
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "FactionManager_USxUSSR: "\
+   "Configure desired factions"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 7114.537 74.066 6406
+}
+SCR_BaseGameMode GameModeGLL : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameModeSF.et" {
+ components {
+  SCR_EditorRespawnBriefingComponent "{631334D7BEBC2DD8}" {
+   m_sJournalConfigPath "{13438C835CFF21FB}Configs/Journal/JournalOpPowerOff.conf"
+  }
+  SCR_MapMarkerManagerComponent "{5D32E876D3886A72}" {
+   m_sMarkerCfgPath "{1CEC9A6084D75ED3}Configs/Map/MapMarkerConfigNOSL.conf"
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{EB924E71B77A8653}Configs/NameTags/GLL_Nametag.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType DISABLED
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "US"
+   }
+  }
+ }
+ coords 7114.537 75.238 6401
+ m_bAutoPlayerRespawn 0
+ m_bAllowFactionChange 0
+}
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 7114.537 73.598 6408
+}
+SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
+ coords 7114.537 74.769 6403
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "TaskManager: "\
+   "Needed for task generation"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+SCR_LoadoutManager LoadoutManager_USxUSSR : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
+ coords 7114.537 74.301 6405
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "LoadoutManager_USxUSSR: "\
+   "Configure desired loadouts"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}

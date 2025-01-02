@@ -1,0 +1,75 @@
+Vehicle M923A1_command1 : "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et" {
+ coords 7487.623 164.586 4347.246
+ angleY -160
+ {
+  SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+   components {
+    SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+     DisplayName "Command truck"
+    }
+   }
+   coords 0 0.033 -5.805
+   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+    Name "Command truck"
+   }
+  }
+ }
+}
+GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 7471.16 164.562 4317.078
+ {
+  GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity Arsenal : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+     components {
+      SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+       m_aDisabledResourceTypes {
+        0
+       }
+      }
+     }
+     coords 24.236 0.102 7.018
+     angleY 94.233
+    }
+    SCR_SpawnPoint Base : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+     components {
+      SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+       DisplayName "Base"
+      }
+     }
+     coords 21.328 0.001 8.598
+     m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+      Name "Base"
+     }
+    }
+   }
+  }
+ }
+}
+$grp Vehicle : "{DD774A8FD0989A78}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_MERDC.et" {
+ M1025_armed_M2HB_MERDC1 {
+  coords 7454.331 164.562 4325.972
+  angleY 107.607
+ }
+ M1025_armed_M2HB_MERDC2 {
+  coords 7455.754 164.563 4331.714
+  angleY 107.607
+ }
+ M1025_armed_M2HB_MERDC3 {
+  coords 7457.849 164.562 4337.044
+  angleY 107.607
+ }
+ M1025_armed_M2HB_MERDC4 {
+  coords 7447.651 164.563 4302.546
+  angleY 107.607
+ }
+ M1025_armed_M2HB_MERDC5 {
+  coords 7451.169 164.563 4313.618
+  angleY 107.607
+ }
+ M1025_armed_M2HB_MERDC6 {
+  coords 7449.074 164.564 4308.288
+  angleY 107.607
+ }
+}

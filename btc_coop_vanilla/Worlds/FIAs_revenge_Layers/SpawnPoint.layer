@@ -1,0 +1,47 @@
+GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 4737.568 0 5762.566
+ {
+  GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 183.881 54.012 96.689
+   {
+    SCR_SpawnPoint : "{2B1758F237E4820E}Prefabs/MP/Spawning/SpawnPoint_FIA.et" {
+     coords 0.95 0.004 -1.177
+     m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+      Name "Barn"
+     }
+    }
+    GenericEntity : "{39568880CC1F9CED}Prefabs/Props/Military/Arsenal/ArsenalBoxes/FIA/ArsenalBox_FIA.et" {
+     components {
+      SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+       m_aDisabledResourceTypes {
+        0
+       }
+      }
+     }
+     coords 5.441 0 0.121
+     angleY 28.901
+    }
+    $grp GameEntity : "{50E6A3845C9F20FD}Prefabs/Props/Military/Camps/LanternMilitary_US_01.et" {
+     {
+      components {
+       SCR_BaseInteractiveLightComponent "{5876E7CF88610C12}" {
+        Enabled 1
+       }
+      }
+      coords 4.221 0 1.983
+      angleY -60.755
+     }
+     {
+      components {
+       SCR_BaseInteractiveLightComponent "{5876E7CF88610C12}" {
+        Enabled 1
+       }
+      }
+      coords 5.057 0 -2.254
+      angleY -60.755
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,74 @@
+GenericEntity : "{2BE613DDC7EA3851}Prefabs/Props/Military/AmmoBoxes/EquipmentBoxStack/EquipmentBoxStack_01_V4_base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{B8A18DA1DEC04635}Assets/Props/Military/AmmoBox/EquipmentBoxStack/EquipmentBoxStack_01_V4.xob"
+   Materials {
+    MaterialAssignClass "{632133C6F9817A5C}" {
+     SourceMaterial "EquipmentBoxWooden_Ammunition_01"
+     AssignedMaterial "{01344AC5F9E023E4}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Ammunition_01_FIA.emat"
+    }
+    MaterialAssignClass "{632133C6F9817AA8}" {
+     SourceMaterial "EquipmentBoxWooden_Explosives_01"
+     AssignedMaterial "{0A0A9C1C7B189A8B}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Explosives_01_FIA.emat"
+    }
+    MaterialAssignClass "{632133C6F9817AAE}" {
+     SourceMaterial "EquipmentBoxWooden_Launcher_01"
+     AssignedMaterial "{261351A506C17475}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Launcher_01_FIA.emat"
+    }
+    MaterialAssignClass "{632133C6F9817AB1}" {
+     SourceMaterial "EquipmentBoxWooden_Weapon_01"
+     AssignedMaterial "{6864083D30F4F63D}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Weapon_01_FIA.emat"
+    }
+   }
+  }
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   ResponseIndex "HugeDestructible"
+  }
+  SCR_DestructionMultiPhaseComponent "{58F89684469E44B1}" {
+   Enabled 1
+   m_fBaseHealth 800
+   m_bPassDamageToChildren 1
+   m_DestroySpawnObjects {
+    SCR_DebrisSpawnable "{58D2F2C60843B78D}" {
+     m_vOffsetPosition 0 0.1 0
+     m_ModelPrefabs +{
+     }
+    }
+   }
+   m_aDamagePhases {
+    SCR_DamagePhaseData "{58D2F2C60B6E95FA}" {
+     m_PhaseModel "{D16B758D73AB49C8}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Dst/EquipmentBoxStack_01_V4_dst/EquipmentBoxStack_01_V4_dst_01.xob"
+     m_PhaseDestroySpawnObjects {
+      SCR_DebrisSpawnable "{58D2F2C6D54B997F}" {
+       m_vOffsetPosition 0 0.1 0
+       m_ModelPrefabs +{
+       }
+      }
+     }
+    }
+    SCR_DamagePhaseData "{632133C6F9817A83}" {
+     m_fPhaseHealth 1000
+     m_PhaseModel "{0AF1552175F33A1E}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Dst/EquipmentBoxStack_01_V1_dst/EquipmentBoxStack_01_V1_dst_01.xob"
+     m_PhaseDestroySpawnObjects {
+      SCR_DebrisSpawnable "{632133C6F9817A86}" {
+       m_vOffsetPosition 0 -0.5 0
+       m_ModelPrefabs {
+        "{4875CC146E4C7858}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Dst/EquipmentBoxStack_01_V4_dst/EquipmentBoxStack_01_V4_dst_02.xob" "{4FB2364508CAC29B}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Dst/EquipmentBoxStack_01_V4_dst/EquipmentBoxStack_01_V4_dst_05.xob" "{D9237B7ED820868D}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Dst/EquipmentBoxStack_01_V4_dst/EquipmentBoxStack_01_V4_dst_08.xob" "{AE2913F62C8269FD}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Dst/EquipmentBoxStack_01_V4_dst/EquipmentBoxStack_01_V4_dst_09.xob" "{52695A9D8AD4CECC}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Dst/EquipmentBoxStack_01_V4_dst/EquipmentBoxStack_01_V4_dst_10.xob"
+       }
+       m_fMass 3
+       m_eMaterialSoundType WOOD_PLANK_SMALL
+      }
+      SCR_ParticleSpawnable "{632133C6F9817A89}" {
+       m_Particle "{63D673751320F318}Particles/Props/Dest_Prop_Wood_Medium.ptc"
+      }
+     }
+    }
+   }
+  }
+  RplComponent "{5476B36C54387F41}" {
+   Enabled 1
+  }
+ }
+ coords 0 0 0
+}

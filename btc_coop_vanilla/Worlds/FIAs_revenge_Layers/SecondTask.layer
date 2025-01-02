@@ -1,0 +1,49 @@
+GenericEntity Area4 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 4418.627 63.523 5002.271
+ {
+  GenericEntity LayerTaskMove1 : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     m_sFactionKey "FIA"
+     m_eActivationType ON_TRIGGER_ACTIVATION
+     m_sTaskTitle "Regroup for extraction"
+     m_sTaskDescription "Regroup for extraction"
+     m_aTriggerActionsOnFinish {
+      SCR_ScenarioFrameworkActionEndMission "{62E4BBF0D7DAA871}" {
+       m_bOverrideGameOverType 1
+       m_eOverriddenGameOverType COMBATPATROL_VICTORY
+      }
+     }
+    }
+   }
+   coords 0 0 0
+   {
+    GenericEntity SlotExtraction1 : "{9C47DECB98FDA4DA}Prefabs/ScenarioFramework/Components/SlotExtraction.et" {
+     components {
+      SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+       m_sFactionKey "FIA"
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+         m_fAreaRadius 15
+         m_fMinimumPlayersNeededPercentage 1
+         m_fActivationCountdownTimer 20
+         m_bNotificationEnabled 1
+         m_sPlayerActivationNotificationTitle "#AR-CombatScenario_ExfilTrigger_Notification"
+        }
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+  Vehicle UAZ469_FIA1 : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
+   coords -2.31 0.509 -4.485
+   angleY -153.966
+  }
+ }
+}
+Vehicle UAZ469_FIA2 : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
+ coords 4420.807 64.738 5009.413
+ angleY 128.568
+}

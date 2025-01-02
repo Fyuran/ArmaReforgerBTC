@@ -1,0 +1,216 @@
+GenericEntity Area2 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 6643.706 150.938 7712.091
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   Layer3 {
+    coords 0 0 0
+    {
+     GenericEntity LayerTaskMove1 : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+      components {
+       SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+        m_sFactionKey "FIA"
+        m_sTaskTitle "Reach the ambush site"
+        m_sTaskDescription "Reach the ambush site"
+       }
+      }
+      coords 3.267 -0.36 7.259
+      {
+       GenericEntity SlotMoveTo1 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+        components {
+         SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+          m_sFactionKey "FIA"
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+            m_fAreaRadius 200
+           }
+          }
+         }
+        }
+        coords 0 0 0
+       }
+      }
+     }
+     GenericEntity LayerTaskDestroy1 : "{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTaskDestroy.et" {
+      components {
+       SCR_ScenarioFrameworkLayerTaskDestroy "{5A6513F41BA457C8}" {
+        m_sFactionKey "FIA"
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionWaitAndExecute "{6318C261063EA8CA}" {
+          m_iDelayInSeconds 10
+          m_iDelayInSecondsMax 10
+          m_aActions {
+           SCR_ScenarioFrameworkActionSetEntityPosition "{6318C2610E80FC3E}" {
+            m_EntityGetter SCR_ScenarioFrameworkGetEntityByName "{6318C261124809A7}" {
+             m_sEntityName "ControlLayer"
+            }
+            m_vDestination 6643.706 150.938 7712.091
+           }
+          }
+         }
+        }
+        m_sTaskTitle "Destroy enemy vehicles"
+        m_sTaskDescription "Destroy enemy vehicles"
+       }
+      }
+      coords 4.624 -0.492 11.463
+      {
+       $grp GenericEntity : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
+        SlotDestroy1 {
+         components {
+          SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+           m_aActivationActions {
+            SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{631B126E360EA734}" {
+             m_fMaxCruiseSpeed 20
+            }
+           }
+           m_sObjectToSpawn "{DD774A8FD0989A78}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_MERDC.et"
+          }
+         }
+         coords 260.362 -80.054 887.686
+         angleY -158.953
+        }
+        SlotDestroy3 {
+         components {
+          SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+           m_aActivationActions {
+            SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{631B126E03481D16}" {
+             m_fMaxCruiseSpeed 20
+            }
+           }
+           m_sObjectToSpawn "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et"
+          }
+         }
+         coords 265.823 -80.822 898.33
+         angleY -137.629
+        }
+        SlotDestroy4 {
+         components {
+          SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+           m_aActivationActions {
+            SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{631B126E0B0B24EB}" {
+             m_fMaxCruiseSpeed 20
+            }
+           }
+           m_sObjectToSpawn "{DD774A8FD0989A78}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_MERDC.et"
+          }
+         }
+         coords 273.566 -82.08 907.424
+         angleY -139.053
+        }
+       }
+       GenericEntity SlotAI5 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+        components {
+         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+          m_sObjectToSpawn "{C21FB8852B6E69D3}Prefabs/Groups/BLUFOR/Group_US_RifleSquadBIG.et"
+          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6316B6F40B65D9F0}" {
+           m_aLayerName {
+            "SlotWaypoint2" "SlotWaypoint7" "SlotWaypoint8" "SlotWaypoint10"
+           }
+          }
+         }
+        }
+        coords 270.427 -79.869 894.808
+       }
+       $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+        SlotWaypoint2 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{6316B6F44893C67C}" {
+            m_fCompletionRadius 30
+           }
+          }
+         }
+         coords 266.582 -80.562 895.254
+        }
+        SlotWaypoint5 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6316B6F7E0DA57F8}" {
+           }
+          }
+         }
+         coords 164.046 -62.066 447.44
+        }
+        SlotWaypoint7 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6316B6F7E0DA57F8}" {
+           }
+          }
+         }
+         coords -289.594 24.711 -192.256
+        }
+        SlotWaypoint8 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6316B6F7E0DA57F8}" {
+           }
+          }
+         }
+         coords -985.793 67.811 -633.866
+        }
+        SlotWaypoint9 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_bShowDebugShapesInWorkbench 0
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6316B6F7E0DA57F8}" {
+            m_fCompletionRadius 25
+            m_sWaypointPrefab "{C40316EE26846CAB}Prefabs/AI/Waypoints/AIWaypoint_GetOut.et"
+           }
+          }
+         }
+         coords -904.427 67.996 -653.579
+        }
+        SlotWaypoint10 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_bShowDebugShapesInWorkbench 0
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6316B6F7E0DA57F8}" {
+            m_fCompletionRadius 100
+            m_sWaypointPrefab "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et"
+           }
+          }
+         }
+         coords -890.931 66.938 -659.9
+        }
+       }
+      }
+     }
+    }
+   }
+   ControlLayer {
+    coords -428.204 53.126 -235.121
+    {
+     GenericEntity SlotPlayerTrigger1 : "{D183AFE8DAF9793D}Prefabs/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+          m_fAreaRadius 400.5
+          m_eActivationPresence ANY_CHARACTER
+          m_bOnce 1
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkActionWaitAndExecute "{6318C26335C4A70B}" {
+          m_iDelayInSeconds 500
+          m_iDelayInSecondsMax 500
+          m_aActions {
+           SCR_ScenarioFrameworkActionSpawnObjects "{6318C2633ABDC311}" {
+            m_aNameOfObjectsToSpawnOnActivation {
+             "LayerTaskDestroy1"
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+}

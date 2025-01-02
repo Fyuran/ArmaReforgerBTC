@@ -1,0 +1,31 @@
+GenericEntity Area4 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 5793.402 1.044 9496.122
+ {
+  GenericEntity LayerTaskMove1 : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
+     m_sTaskTitle "Regroup for exf"
+     m_sTaskDescription "Regroup for exf"
+     m_aTriggerActionsOnFinish {
+      SCR_ScenarioFrameworkActionEndMission "{62E4BBF0D7DAA871}" {
+       m_bOverrideGameOverType 1
+       m_eOverriddenGameOverType VICTORY
+      }
+     }
+    }
+   }
+   coords 0 0 0
+   {
+    GenericEntity SlotMoveTo1 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+     components {
+      SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+       m_sFactionKey "US"
+      }
+     }
+     coords 0 0 0.522
+    }
+   }
+  }
+ }
+}

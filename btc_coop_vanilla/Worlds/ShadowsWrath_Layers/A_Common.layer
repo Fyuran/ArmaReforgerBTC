@@ -1,0 +1,153 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A297F9E52831}" {
+     NavmeshFile "{E1014B625283F344}worlds/MP/Navmeshes/Coop_CombatOps_Eden.nmn"
+    }
+   }
+  }
+ }
+ coords 5529.125 27.471 10036.323
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7114.537 73.832 6407
+}
+SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+ coords 4923.753 54.012 5857.903
+ Factions {
+  SCR_Faction "{56DEAC40D132400B}" {
+   m_bIsPlayable 1
+  }
+ }
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 7114.537 74.066 6406
+}
+SCR_BaseGameMode GameMode_GLL : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameModeSF.et" {
+ components {
+  SCR_EditorRespawnBriefingComponent "{6302EC9AA573CA3E}" {
+   m_sJournalConfigPath "{0F58978000E70E51}Configs/Journal/JournalOpShadowsWrath.conf"
+   m_Info SCR_UIInfo "{6302EC9AB5DF9F7F}" {
+   }
+  }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_bPermitUnconsciousVON 0
+  }
+  SCR_GameModeSFManager "{5A96783ABCA252AE}" {
+   m_bDynamicDespawn 1
+  }
+  SCR_GameOverScreenManagerComponent "{56DEC646298AD219}" {
+   m_GameOverScreenConfig SCR_GameOverScreenConfig "{56DEC6462FFDD82D}" {
+    m_aGameOverScreens {
+     SCR_BaseGameOverScreenInfo "{59EC75B80DEAA612}" {
+      m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{59EC75B9DB34FA69}" {
+       m_sSubtitle "Mission Accomplished!"
+      }
+     }
+    }
+   }
+  }
+  SCR_InitWeatherComponent "{63072D54DA6D52E7}" {
+   Enabled 0
+   m_iSetWeatherConstant 1
+  }
+  SCR_MapMarkerManagerComponent "{5D32E876D3886A72}" {
+   m_sMarkerCfgPath "{1CEC9A6084D75ED3}Configs/Map/MapMarkerConfigNOSL.conf"
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{EB924E71B77A8653}Configs/NameTags/GLL_Nametag.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType DISABLED
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "FIA"
+   }
+  }
+  SCR_TimeAndWeatherHandlerComponent "{6310739618015DD2}" {
+   m_iStartingHours 6
+   m_iStartingMinutes 50
+   m_iRangeHoursStart 6
+   m_iRangeMinutesStart 50
+   m_iRangeHoursEnd 6
+   m_iRangeMinutesEnd 50
+  }
+ }
+ coords 7114.537 75.238 6401
+ userScript "	private ref SCR_RS_AISpawner m_RSAISpawner;"\
+ "	"\
+ "	SCR_RS_AISpawner GetAISpawner()"\
+ "	{"\
+ "		return m_RSAISpawner;"\
+ "	}"\
+ "	"\
+ "	override void OnGameStart()"\
+ "	{"\
+ "		/*"\
+ "		super.OnGameStart();"\
+ "		"\
+ "		m_RSAISpawner = new SCR_RS_AISpawner();"\
+ "		//SCR_RS_AISpawner aiSpawner = GameMode_GLL_Class.Cast(GetGame().GetGameMode()).AISpawner();"\
+ "		"\
+ "		string spawnGroup = \"{C8622D0595B48437}Prefabs/Groups/OPFOR/Group_USSR_AmmoTeam.et\";"\
+ "		string waypointType = \"{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et\";"\
+ "		"\
+ "		IEntity spawnPosition = GetGame().GetWorld().FindEntityByName(\"Rinf_Spawn\");"\
+ "		IEntity waypointPosition = GetGame().GetWorld().FindEntityByName(\"Rinf_Move\");"\
+ "		"\
+ "		GetGame().GetCallqueue().CallLater(m_RSAISpawner.AISpawner, 10000, false, spawnGroup, spawnPosition.GetOrigin(), waypointType, waypointPosition.GetOrigin());"\
+ "		*/"\
+ "	}"
+ m_bAutoPlayerRespawn 0
+ m_bAllowFactionChange 0
+}
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 7114.537 73.598 6408
+}
+SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
+ coords 7114.537 74.769 6403
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "TaskManager: "\
+   "Needed for task generation"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+SCR_LoadoutManager : "{B54D08AEA74A5354}Prefabs/MP/Managers/Loadouts/LoadoutManager_Editor.et" {
+ coords 4922.432 54.015 5859.282
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{5596D845DBEEF78C}" {
+   m_sLoadoutName "Rifleman"
+   m_sLoadoutResource "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+   m_sAffiliatedFaction "FIA"
+  }
+  SCR_FactionPlayerLoadout "{5596D8455CFBE540}" {
+   m_sLoadoutResource "{066644E57BA1E26E}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Sapper.et"
+   m_sAffiliatedFaction ""
+  }
+  SCR_FactionPlayerLoadout "{5596D844009597AC}" {
+   m_sLoadoutResource "{58E47E5A4D599432}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_MG.et"
+   m_sAffiliatedFaction ""
+  }
+  SCR_PlayerArsenalLoadout "{568CC9D1BC0FCCF3}" {
+   m_sLoadoutResource "{75FC25863194612A}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AMG.et"
+   m_sAffiliatedFaction ""
+  }
+  SCR_PlayerArsenalLoadout "{568CC9D1B0926B78}" {
+   m_sLoadoutResource "{45A02CA25CBA9443}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Medic.et"
+   m_sAffiliatedFaction ""
+  }
+  SCR_PlayerArsenalLoadout "{568CC9D1B2D77D1F}" {
+   m_sLoadoutResource "{CE33AB22F61F3365}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Sharpshooter.et"
+   m_sAffiliatedFaction ""
+  }
+ }
+}

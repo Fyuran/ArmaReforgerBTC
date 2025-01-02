@@ -1,0 +1,128 @@
+GenericEntity RoadFortification_prefab : "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et" {
+ coords 6337.609 5.321 9659.555
+ angleY 113.029
+ {
+  GenericEntity {
+   ID "5CCCBEDC9EB8023A"
+   {
+    Turret MG {
+     ID "5CC6B4BEF18D0296"
+    }
+   }
+  }
+ }
+}
+$grp SCR_AIGroup : "{1A5F0D93609DA5DA}Prefabs/Groups/OPFOR/Group_USSR_ManeuverGroup.et" {
+ Patrol1 {
+  coords 6398.393 7.256 9635.479
+  m_aStaticWaypoints {
+   "Cycle_patrol1"
+  }
+ }
+ Patrol2 {
+  coords 6386.776 1.241 9591.673
+  m_aStaticWaypoints {
+   "Cycle_patrol2"
+  }
+ }
+}
+$grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+ WP_Patrol1_1 {
+  coords 6402.311 10.266 9666.504
+ }
+ WP_Patrol1_2 {
+  coords 6322.762 7.824 9703.008
+ }
+ WP_Patrol1_3 {
+  coords 6297.802 0.625 9615.684
+ }
+ WP_Patrol1_4 {
+  coords 6384.453 1.331 9592.668
+ }
+}
+$grp SCR_AIGroup : "{30ED11AA4F0D41E5}Prefabs/Groups/OPFOR/Group_USSR_FireGroup.et" {
+ Grouphouse {
+  coords 6369.015 6.26 9631.53
+  m_aStaticWaypoints {
+   "Grouphouse_wp"
+  }
+ }
+ Grouphouse2 {
+  coords 6328.695 5.602 9674.149
+  m_aStaticWaypoints {
+   "Grouphouse2_wp"
+  }
+ }
+ Grouphouse3 {
+  coords 6315.882 0.267 9609.2
+  m_aStaticWaypoints {
+   "Grouphouse3_wp"
+  }
+ }
+ GroupRinf {
+  coords 6092.66 24.67 9834.164
+  DangerEventRange 300
+ }
+}
+$grp AIWaypointCycle : "{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et" {
+ Cycle_patrol1 {
+  coords 6403.321 7.094 9636.569
+  CycleWaypoints {
+   "WP_Patrol1_1" "WP_Patrol1_2" "WP_Patrol1_3" "WP_Patrol1_4"
+  }
+ }
+ Cycle_patrol2 {
+  coords 6404.691 8.946 9646.336
+  CycleWaypoints {
+   "WP_Patrol1_4" "WP_Patrol1_3" "WP_Patrol1_2" "WP_Patrol1_1"
+  }
+ }
+}
+SCR_BoardingEntityWaypoint MG_wp : "{712F4795CF8B91C7}Prefabs/AI/Waypoints/AIWaypoint_GetIn.et" {
+ coords 6337.005 5.214 9658.913
+ CompletionRadius 2
+ m_EntityWaypointParameters SCR_AIEntityWaypointParameters "{60D10A783D086D37}" {
+  m_sEntityName "MG"
+ }
+}
+$grp GenericEntity : "{7B4CD0B54AA169AA}Prefabs/Props/Military/Sandbags/Sandbag_01_long_base.et" {
+ {
+  coords 6441.273 6.275 9611.934
+  angleY 69.698
+ }
+ {
+  coords 6439.321 6.227 9614.419
+  angleY 35.845
+ }
+}
+$grp SCR_DefendWaypoint : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+ GroupSandbag_wp {
+  coords 6437.443 6.106 9611.148
+  scale 0
+  CompletionRadius 3
+ }
+ Grouphouse_wp {
+  coords 6376.653 6.074 9626.376
+  CompletionRadius 6
+ }
+ Grouphouse2_wp {
+  coords 6341.479 5.416 9668.742
+  CompletionRadius 9
+ }
+ Grouphouse3_wp {
+  coords 6335.886 0.601 9612.927
+  CompletionRadius 20
+ }
+}
+SCR_AIGroup GroupSandbag : "{A2F75E45C66B1C0A}Prefabs/Groups/OPFOR/Group_USSR_MachineGunTeam.et" {
+ coords 6436.746 6.247 9610.396
+ m_aStaticWaypoints {
+  "GroupSandbag_wp"
+ }
+}
+SCR_AIGroup MG_group : "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et" {
+ coords 6333.811 5.194 9662.881
+ m_aStaticWaypoints {
+  "MG_wp"
+ }
+}

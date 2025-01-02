@@ -1,0 +1,934 @@
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ Levie {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_sFactionKey "US"
+    m_bDynamicDespawn 1
+   }
+  }
+  coords 7486.415 138.684 4720.156
+  {
+   GenericEntity Layer3 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI1 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{D97EAE64721478F3}Prefabs/Characters/Factions/CIV/ConstructionWorker/Character_CIV_ConstructionWorker_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords -88.406 0 0
+      }
+      SlotAI3 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords 56.468 0.766 -9.01
+      }
+      SlotAI4 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords -2.521 -2.59 52.232
+      }
+      SlotAI5 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords 51.731 -3.7 50.694
+      }
+      SlotAI6 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords 47.557 -0.349 2.374
+      }
+      SlotAI7 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords -34.825 0.025 -19.969
+      }
+      SlotAI8 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords -62.726 -3.255 47.219
+      }
+     }
+     GenericEntity SlotWaypoint1 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointLoiterCO "{632133DF57C16C08}" {
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ Laruns {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_sFactionKey "US"
+    m_bDynamicDespawn 1
+   }
+  }
+  coords 7576.792 82.494 5512.687
+  {
+   GenericEntity Layer5 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI2 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{D97EAE64721478F3}Prefabs/Characters/Factions/CIV/ConstructionWorker/Character_CIV_ConstructionWorker_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint2"
+          }
+         }
+        }
+       }
+       coords -35.169 -0.357 -30.669
+      }
+      SlotAI9 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint2"
+          }
+         }
+        }
+       }
+       coords 53.133 0.419 4.937
+      }
+      SlotAI10 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint2"
+          }
+         }
+        }
+       }
+       coords 17.934 -2.807 79.461
+      }
+      SlotAI11 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint2"
+          }
+         }
+        }
+       }
+       coords 47.557 -0.349 2.374
+      }
+      SlotAI12 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint2"
+          }
+         }
+        }
+       }
+       coords -34.825 0.025 -19.969
+      }
+      SlotAI13 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint2"
+          }
+         }
+        }
+       }
+       coords 6.055 -3.05 87.748
+      }
+      SlotAI14 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint2"
+          }
+         }
+        }
+       }
+       coords 57.076 0.254 -29.173
+      }
+     }
+     GenericEntity SlotWaypoint2 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointLoiterCO "{632133DF57C16C08}" {
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ Chotain {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_sFactionKey "US"
+    m_bDynamicDespawn 1
+   }
+  }
+  coords 7065.525 118.469 6019.771
+  {
+   GenericEntity Layer6 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI15 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{D97EAE64721478F3}Prefabs/Characters/Factions/CIV/ConstructionWorker/Character_CIV_ConstructionWorker_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint3"
+          }
+         }
+        }
+       }
+       coords -14.35 -0.661 -50.773
+      }
+      SlotAI16 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint3"
+          }
+         }
+        }
+       }
+       coords 53.212 0.417 14.516
+      }
+      SlotAI17 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint3"
+          }
+         }
+        }
+       }
+       coords 17.934 -2.807 79.461
+      }
+      SlotAI18 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint3"
+          }
+         }
+        }
+       }
+       coords 66.993 -0.438 41.12
+      }
+      SlotAI19 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint3"
+          }
+         }
+        }
+       }
+       coords -47.176 -0.034 14.013
+      }
+      SlotAI20 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint3"
+          }
+         }
+        }
+       }
+       coords -27.259 1.012 41.131
+      }
+      SlotAI21 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint3"
+          }
+         }
+        }
+       }
+       coords 20.754 0.015 -36.989
+      }
+     }
+     GenericEntity SlotWaypoint3 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointLoiterCO "{632133DF57C16C08}" {
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ EntreDeux {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_sFactionKey "US"
+    m_bDynamicDespawn 1
+   }
+  }
+  coords 5746.161 218.301 7068.042
+  {
+   GenericEntity Layer7 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI22 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{D97EAE64721478F3}Prefabs/Characters/Factions/CIV/ConstructionWorker/Character_CIV_ConstructionWorker_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint4"
+          }
+         }
+        }
+       }
+       coords -14.35 -0.661 -50.773
+      }
+      SlotAI23 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint4"
+          }
+         }
+        }
+       }
+       coords 46.722 -0.845 9.381
+      }
+      SlotAI24 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint4"
+          }
+         }
+        }
+       }
+       coords 18.704 -1.005 39.677
+      }
+      SlotAI25 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint4"
+          }
+         }
+        }
+       }
+       coords 25.86 -4.504 -39.076
+      }
+      SlotAI26 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint4"
+          }
+         }
+        }
+       }
+       coords -51.064 -0.336 -8.92
+      }
+      SlotAI27 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint4"
+          }
+         }
+        }
+       }
+       coords -27.259 1.012 41.131
+      }
+      SlotAI28 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint4"
+          }
+         }
+        }
+       }
+       coords 21.77 -0.116 -37.644
+      }
+     }
+     GenericEntity SlotWaypoint4 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointLoiterCO "{632133DF57C16C08}" {
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ Provins {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_sFactionKey "US"
+    m_bDynamicDespawn 1
+   }
+  }
+  coords 5516.884 95.798 6008.686
+  {
+   GenericEntity Layer8 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI29 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{D97EAE64721478F3}Prefabs/Characters/Factions/CIV/ConstructionWorker/Character_CIV_ConstructionWorker_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint5"
+          }
+         }
+        }
+       }
+       coords -22.253 -3.55 -12.756
+      }
+      SlotAI30 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint5"
+          }
+         }
+        }
+       }
+       coords 46.722 -0.194 9.381
+      }
+      SlotAI31 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint5"
+          }
+         }
+        }
+       }
+       coords -14.135 -0.985 38.767
+      }
+      SlotAI32 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint5"
+          }
+         }
+        }
+       }
+       coords 44.464 0.078 74.024
+      }
+      SlotAI33 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint5"
+          }
+         }
+        }
+       }
+       coords 10.779 -0.687 96.206
+      }
+      SlotAI34 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint5"
+          }
+         }
+        }
+       }
+       coords -27.259 -1.824 41.131
+      }
+      SlotAI35 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint5"
+          }
+         }
+        }
+       }
+       coords 21.77 -0.176 -37.644
+      }
+     }
+     GenericEntity SlotWaypoint5 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointLoiterCO "{632133DF57C16C08}" {
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ Figari {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_sFactionKey "US"
+    m_bDynamicDespawn 1
+   }
+  }
+  coords 5252.165 63.136 5342.389
+  {
+   GenericEntity Layer9 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI36 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{D97EAE64721478F3}Prefabs/Characters/Factions/CIV/ConstructionWorker/Character_CIV_ConstructionWorker_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint6"
+          }
+         }
+        }
+       }
+       coords -21.826 -1.316 24.444
+      }
+      SlotAI37 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint6"
+          }
+         }
+        }
+       }
+       coords 55.103 -0.477 11.72
+      }
+      SlotAI38 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint6"
+          }
+         }
+        }
+       }
+       coords -14.135 -1.899 38.767
+      }
+      SlotAI39 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint6"
+          }
+         }
+        }
+       }
+       coords 54.331 -0.013 74.92
+      }
+      SlotAI40 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint6"
+          }
+         }
+        }
+       }
+       coords 6.696 -6.963 81.242
+      }
+      SlotAI41 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint6"
+          }
+         }
+        }
+       }
+       coords 62.885 0.257 -2.865
+      }
+      SlotAI42 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint6"
+          }
+         }
+        }
+       }
+       coords 48.625 1.906 -43.615
+      }
+     }
+     GenericEntity SlotWaypoint6 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointLoiterCO "{632133DF57C16C08}" {
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ Morton {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_sFactionKey "US"
+    m_bDynamicDespawn 1
+   }
+  }
+  coords 5091.432 14.448 4012.318
+  {
+   GenericEntity Layer10 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI43 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{D97EAE64721478F3}Prefabs/Characters/Factions/CIV/ConstructionWorker/Character_CIV_ConstructionWorker_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords -21.826 -1.316 24.444
+      }
+      SlotAI44 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords 55.103 -0.477 11.72
+      }
+      SlotAI45 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords -25.352 0.134 15.83
+      }
+      SlotAI46 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords -88.258 1.447 7.618
+      }
+      SlotAI47 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords 26.274 1.824 75.611
+      }
+      SlotAI48 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords 39.686 -0.137 39.471
+      }
+      SlotAI49 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords 83.987 1.708 -54.208
+      }
+      SlotAI51 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords -32.275 0.703 -14.917
+      }
+      SlotAI52 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords -27.532 0.437 -70.324
+      }
+      SlotAI53 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords 5.659 -0.754 -84.672
+      }
+      SlotAI54 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "CIV"
+         m_sObjectToSpawn "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{632133DF624E5B19}" {
+          m_aLayerName {
+           "SlotWaypoint7"
+          }
+         }
+        }
+       }
+       coords -106.203 1.633 9.206
+      }
+     }
+     GenericEntity SlotWaypoint7 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointLoiterCO "{632133DF57C16C08}" {
+         m_fCompletionRadius 150
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+}

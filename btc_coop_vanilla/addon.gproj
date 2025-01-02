@@ -1,0 +1,26 @@
+GameProject {
+ ID "btc_coop_vanilla"
+ GUID "6263175B7F4687D7"
+ TITLE "btc_coop_vanilla"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+ Configurations {
+  GameProjectConfig PC {
+   ChimeraGlobalConfig ChimeraGlobalConfig "{6F12664687156A7B}" {
+    "Maximum View Distance" 25000
+    "Minimum View Distance" 25000
+   }
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

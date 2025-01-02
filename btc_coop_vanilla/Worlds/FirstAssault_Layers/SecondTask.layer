@@ -1,0 +1,33 @@
+GenericEntity Area3 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 5795.612 0 9766.63
+ {
+  GenericEntity LayerTaskDestroy1 : "{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTaskDestroy.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskDestroy "{5A6513F41BA457C8}" {
+     m_sTaskTitle "Cut off enemy power"
+     m_sTaskDescription "Cut off enemy power by destroy the control panel of the power plant"
+     m_bPlaceMarkerOnSubjectSlot 1
+     m_aTriggerActionsOnFinish {
+      SCR_ScenarioFrameworkActionSpawnObjects "{62FCFEC6E22C9D70}" {
+       m_aNameOfObjectsToSpawnOnActivation {
+        "LayerTaskMove1"
+       }
+      }
+     }
+    }
+   }
+   coords 0 0 0
+   {
+    GenericEntity SlotDestroy1 : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
+     components {
+      SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+       m_sFactionKey "US"
+       m_sObjectToSpawn "{60F052D43EEED112}Prefabs/Structures/BuildingParts/Eletrical/ControlPanel_01/ControlPanel_01.et"
+      }
+     }
+     coords 4.214 8.845 17.285
+    }
+   }
+  }
+ }
+}

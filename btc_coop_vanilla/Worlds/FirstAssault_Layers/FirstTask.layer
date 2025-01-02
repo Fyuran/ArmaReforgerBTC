@@ -1,0 +1,31 @@
+GenericEntity Area2 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 6342.845 5.543 9647.402
+ {
+  GenericEntity LayerTaskClearArea1 : "{CDC0845AD90BA073}Prefabs/ScenarioFramework/Components/LayerTaskClearArea.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskClearArea "{5A6513F46D132331}" {
+     m_sFactionKey "US"
+     m_sTaskTitle "Clear Kermovan"
+     m_sTaskDescription "Clera Kermovan from enemy force"
+    }
+   }
+   coords 0 0 0
+   {
+    GenericEntity SlotClearArea1 : "{E53456990A756229}Prefabs/ScenarioFramework/Components/SlotClearArea.et" {
+     components {
+      SCR_ScenarioFrameworkSlotClearArea "{5A633AF525D5B972}" {
+       m_sFactionKey "US"
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{5A633AF5368D26A3}" {
+         m_fAreaRadius 75
+         m_sActivatedByThisFaction "US"
+        }
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,96 @@
+GenericEntity Area5 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 7471.16 164.562 4317.078
+ {
+  GenericEntity Layer2 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    $grp GenericEntity : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+     Respawn {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6312B5D9D63D59E0}" {
+         m_eMapMarkerDimension INSTALLATION
+         m_eMapMarkerType1Modifier RESPAWN
+         m_eMapMarkerType2Modifier RESPAWN
+        }
+       }
+      }
+      coords -9.993 -4.347 3.29
+     }
+     SlotMarker_task1 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_sObjectToSpawn "{DD74BE2BBAE07192}Prefabs/Markers/MapMarkerEntityBase.et"
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{62FCFEC498ED87B7}" {
+         m_eMapMarkerIcon FLAG
+         m_eMapMarkerColor RED
+        }
+       }
+      }
+      coords -2885 -91.189 469.257
+     }
+     SlotMarker_task2 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_sObjectToSpawn "{DD74BE2BBAE07192}Prefabs/Markers/MapMarkerEntityBase.et"
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{62FCFEC498ED87B7}" {
+         m_eMapMarkerIcon FLAG
+         m_eMapMarkerColor RED
+        }
+       }
+      }
+      coords -47.698 -143.629 1955.457
+     }
+     SlotMarker_task3 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_sObjectToSpawn "{DD74BE2BBAE07192}Prefabs/Markers/MapMarkerEntityBase.et"
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{62FCFEC498ED87B7}" {
+         m_eMapMarkerIcon FLAG
+         m_eMapMarkerColor RED
+        }
+       }
+      }
+      coords -2885 -66.988 2217.421
+     }
+     SlotMarker_task4 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_sObjectToSpawn "{DD74BE2BBAE07192}Prefabs/Markers/MapMarkerEntityBase.et"
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{62FCFEC498ED87B7}" {
+         m_eMapMarkerIcon FLAG
+         m_eMapMarkerColor RED
+        }
+       }
+      }
+      coords -1595.405 68.957 2833.727
+     }
+     SlotMarker1 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_sObjectToSpawn "{DD74BE2BBAE07192}Prefabs/Markers/MapMarkerEntityBase.et"
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{62FCFEC498ED87B7}" {
+         m_eMapMarkerIcon FLAG
+         m_eMapMarkerColor RED
+        }
+       }
+      }
+      coords -856.445 -14.517 2783.756
+     }
+     SlotMarker2 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_sObjectToSpawn "{DD74BE2BBAE07192}Prefabs/Markers/MapMarkerEntityBase.et"
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{62FCFEC498ED87B7}" {
+         m_eMapMarkerIcon FLAG
+         m_eMapMarkerColor RED
+        }
+       }
+      }
+      coords 366.511 -25.575 643.942
+     }
+    }
+   }
+  }
+ }
+}

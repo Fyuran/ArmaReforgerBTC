@@ -1,0 +1,268 @@
+SCR_SpawnTriggerEntity TriggerRinf {
+ coords 5826.935 6.656 9741.511
+ TriggerShapeType Sphere
+ SphereRadius 70
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ OnActivate ""\
+ "		super.OnActivate(ent);"\
+ "		"\
+ "   		string spawnGroup = \"{C8622D0595B48437}Prefabs/Groups/OPFOR/Group_USSR_AmmoTeam.et\";"\
+ "    	string waypointType = \"{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et\";"\
+ "    "\
+ "    	IEntity spawnPosition = GetGame().GetWorld().FindEntityByName(\"Rinf2_Spawn\");"\
+ "    	IEntity waypointPosition = GetGame().GetWorld().FindEntityByName(\"Rinf_Move\");"\
+ "		    "\
+ "    	GetGame().GetCallqueue().CallLater(SCR_AISpawner.SpawnAI, 10000, false, spawnGroup, spawnPosition.GetOrigin(), waypointType, waypointPosition.GetOrigin());   		"\
+ "		"\
+ "    "\
+ "    	IEntity spawnPosition2 = GetGame().GetWorld().FindEntityByName(\"Rinf_Spawn\");"\
+ "    	IEntity waypointPosition2 = GetGame().GetWorld().FindEntityByName(\"Rinf_Move\");"\
+ "    "\
+ "    	GetGame().GetCallqueue().CallLater(SCR_AISpawner.SpawnAI, 120000, false, spawnGroup, spawnPosition2.GetOrigin(), waypointType, waypointPosition2.GetOrigin());"\
+ "		"\
+ "	"
+ m_sOwnerFactionKey "US"
+}
+$grp SCR_AIGroup : "{1A5F0D93609DA5DA}Prefabs/Groups/OPFOR/Group_USSR_ManeuverGroup.et" {
+ Patrol2_1 {
+  coords 5754.142 8.139 9642.646
+  m_aStaticWaypoints {
+   "Cycle_patrol2_1"
+  }
+ }
+ Patrol2_2 {
+  coords 5777.794 5.135 9805.933
+  m_aStaticWaypoints {
+   "Cycle_patrol2_2"
+  }
+ }
+ GroupDefend2_1 {
+  coords 5853.181 4.6 9717.34
+  m_aStaticWaypoints {
+   "GroupDefend2_1_wp"
+  }
+ }
+ GroupDefend2_2 {
+  coords 5839.028 -1.117 9800.392
+  m_aStaticWaypoints {
+   "GroupDefend2_2_wp"
+  }
+ }
+}
+$grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+ WP_Patrol2_1 {
+  coords 5754.674 6.778 9643.893
+ }
+ WP_Patrol2_2 {
+  coords 5870.887 4.977 9670.08
+ }
+ WP_Patrol2_3 {
+  coords 5836.785 4.565 9812.741
+ }
+ WP_Patrol2_4 {
+  coords 5777.092 4.969 9811.338
+ }
+}
+GenericEntity : "{25861AD07CEE719B}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_MG_USSR_01_PKM.et" {
+ coords 5812.911 7.952 9734.149
+ angleY 84.351
+ {
+  Turret MG2 {
+   ID "5CC6B4BEF18D0296"
+   coords 0.005 0.656 -0.754
+  }
+ }
+}
+$grp SCR_AIGroup : "{30ED11AA4F0D41E5}Prefabs/Groups/OPFOR/Group_USSR_FireGroup.et" {
+ Groupfactory {
+  coords 5780.073 6.652 9769.063
+  m_aUnitPrefabSlots + {
+   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{E9AEEF2D9E41321B}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AMG.et" "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{AB9726163EC1BD81}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Medic.et"
+  }
+  m_aStaticWaypoints {
+   "Groupfactory_wp"
+  }
+ }
+ GroupHQ {
+  coords 5770.181 9.34 9711.903
+  m_aUnitPrefabSlots + {
+   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{E9AEEF2D9E41321B}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AMG.et" "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{AB9726163EC1BD81}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Medic.et"
+  }
+  m_aStaticWaypoints {
+   "GroupHQ_wp"
+  }
+ }
+ Groupoutside_1 {
+  coords 5469.389 22.419 9632.026
+  DangerEventRange 450
+  m_aUnitPrefabSlots + {
+   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{E9AEEF2D9E41321B}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AMG.et" "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{AB9726163EC1BD81}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Medic.et"
+  }
+ }
+ GroupOutside_2 {
+  coords 6014.769 8.208 9940.396
+  DangerEventRange 300
+ }
+ GroupInside {
+  coords 5742.544 9.127 9662.081
+  DangerEventRange 150
+ }
+}
+$grp AIWaypointCycle : "{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et" {
+ Cycle_patrol2_1 {
+  coords 5732.745 12.541 9763.579
+  CycleWaypoints {
+   "WP_Patrol2_1" "WP_Patrol2_2" "WP_Patrol2_3" "WP_Patrol2_4"
+  }
+ }
+ Cycle_patrol2_2 {
+  coords 5731.264 9.858 9762.991
+  CycleWaypoints {
+   "WP_Patrol2_4" "WP_Patrol2_3" "WP_Patrol2_2" "WP_Patrol2_1"
+  }
+ }
+}
+$grp GenericEntity : "{477EE9B6044C64EE}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_Containers_FIA_01.et" {
+ {
+  coords 5806.955 7.728 9748.021
+ }
+ {
+  coords 5787.038 7.901 9748.289
+  angleY 176.598
+ }
+}
+GenericEntity : "{57D197AC8D11E283}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Supply_Medium_USSR_01.et" {
+ coords 5796.698 7.969 9723.602
+ angleY 94.074
+}
+$grp GenericEntity : "{621AD664E58BC26B}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Supply_Small_USSR_01.et" {
+ {
+  coords 5806.581 7.969 9724.471
+  angleY 0
+ }
+ {
+  coords 5801.452 7.969 9724.839
+  angleY 0
+ }
+}
+$grp SCR_BoardingEntityWaypoint : "{712F4795CF8B91C7}Prefabs/AI/Waypoints/AIWaypoint_GetIn.et" {
+ MG2_wp {
+  coords 5811.918 7.968 9734.577
+  CompletionRadius 4
+  m_EntityWaypointParameters SCR_AIEntityWaypointParameters "{60D10A783D086D37}" {
+   m_sEntityName "MG2"
+  }
+ }
+ MG3_wp {
+  coords 5790.573 7.941 9746.901
+  CompletionRadius 4
+  m_EntityWaypointParameters SCR_AIEntityWaypointParameters "{60D10A783D086D37}" {
+   m_sEntityName "MG3"
+  }
+ }
+}
+GenericEntity : "{73C2A7008B434B5C}Prefabs/Compositions/Misc/SubCompositions/CanvasCover_Cluttered_USSR_03.et" {
+ coords 5800.209 7.969 9742.146
+ angleY 89.724
+}
+GenericEntity : "{84E8458C841C1808}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_Wall_USSR_01.et" {
+ coords 5802.632 7.674 9749.39
+ angleY 0
+}
+$grp SCR_DefendWaypoint : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+ Groupfactory_wp {
+  coords 5809.946 5.132 9792.941
+  CompletionRadius 15
+ }
+ GroupSniper_wp {
+  coords 5805.601 16.529 9784.386
+  CompletionRadius 1
+ }
+ GroupSolo_wp {
+  coords 5802.813 7.77 9748.279
+  CompletionRadius 1
+ }
+ GroupHQ_wp {
+  coords 5800.053 7.82 9735.781
+  CompletionRadius 23.6
+ }
+ GroupDefend2_1_wp {
+  coords 5868.173 10.279 9718.259
+  CompletionRadius 26.7
+ }
+ GroupDefend2_2_wp {
+  coords 5845.25 4.562 9819.421
+  CompletionRadius 4
+ }
+}
+GenericEntity : "{9751583B234C4202}Prefabs/Compositions/Misc/SubCompositions/Sandbag_MG_USSR_02_PKM.et" {
+ coords 5791.01 7.895 9748.813
+ {
+  GenericEntity {
+   ID "5C5AC612652E574F"
+   {
+    GameEntity MG3 {
+     ID "59A297CB53D15C0E"
+     coords -0.314 0.673 -0.012
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+ Rinf_Spawn {
+  coords 5564.723 24.635 9718.641
+ }
+ Rinf_Move {
+  coords 5815.833 7.852 9766.078
+ }
+ Rinf2_Spawn {
+  coords 5605.836 26.85 9878.688
+ }
+}
+$grp SCR_AIGroup : "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et" {
+ GroupSniper {
+  coords 5805.943 17.054 9786.021
+  m_aUnitPrefabSlots {
+   "{976AC400219898FA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Sharpshooter.et"
+  }
+  m_bSnapToTerrain 0
+  m_aStaticWaypoints {
+   "GroupSniper_wp"
+  }
+ }
+ MG2_group {
+  coords 5808.073 7.948 9733.883
+  m_aStaticWaypoints {
+   "MG2_wp"
+  }
+ }
+ GroupSolo {
+  coords 5802.807 8.295 9747.083
+  m_aUnitPrefabSlots {
+   "{23ADBBC31B6A3DC6}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AR.et"
+  }
+  m_bSnapToTerrain 0
+  m_aStaticWaypoints {
+   "GroupSolo_wp"
+  }
+ }
+ MG3_group {
+  coords 5787.377 7.921 9746.741
+  m_aStaticWaypoints {
+   "MG3_wp"
+  }
+ }
+}
+GenericEntity : "{CEB691AFB46D7CAB}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_Containers_FIA_03.et" {
+ coords 5797.171 7.929 9748.489
+ angleY 89.016
+ {
+  GenericEntity {
+   ID "5D453938F45912F6"
+   coords -0.136 -0.001 -3.729
+   angleY -92.416
+  }
+ }
+}

@@ -1,0 +1,8 @@
+GameProject {
+ ID "btcconflictdev"
+ GUID "633D3E5AB03F19B2"
+ TITLE "btc_conflict_dev"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

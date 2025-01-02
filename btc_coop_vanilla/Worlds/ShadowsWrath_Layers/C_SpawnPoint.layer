@@ -1,0 +1,74 @@
+Vehicle S105_randomized1 : "{128253A267BE9424}Prefabs/Vehicles/Wheeled/S105/S105_randomized.et" {
+ coords 6233.956 180.095 7478.72
+ angleY 14
+}
+Vehicle S105_darkblue1 : "{9C3269FB43F989A3}Prefabs/Vehicles/Wheeled/S105/S105_darkblue.et" {
+ coords 6227.049 180.257 7486.135
+ angleY 88
+}
+Vehicle S1203_transport_brown1 : "{ACED839A6C5BE657}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_brown.et" {
+ coords 6230.114 179.966 7489.861
+ angleY 104
+}
+GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 6222.124 180.513 7485.666
+ {
+  GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity : "{0AA94C2082A4A3A0}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Medical_FIA.et" {
+     components {
+      SCR_ResourceComponent "{5DACFA5343CF2065}" {
+       m_aDisabledResourceTypes {
+        0
+       }
+      }
+     }
+     coords 4.188 0.298 -11.445
+     angleY -65.033
+    }
+    GenericEntity : "{10F9EE0FB9EC0E4E}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Ammunition_FIA.et" {
+     components {
+      SCR_ResourceComponent "{5E5ABDF371AE8B21}" {
+       m_aDisabledResourceTypes {
+        0
+       }
+      }
+     }
+     coords 0.732 0.298 -10.945
+     angleY 88.29
+    }
+    SCR_SpawnPoint : "{2B1758F237E4820E}Prefabs/MP/Spawning/SpawnPoint_FIA.et" {
+     coords 2.162 0.397 -10.609
+     angleY 28.406
+     m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+      Name "Barn"
+     }
+    }
+    GenericEntity : "{7A82FE978603F137}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et" {
+     coords 4.506 0.298 -10.269
+    }
+    GenericEntity : "{A7AF84C6C58BA3E8}Prefabs/Weapons/MachineGuns/RPK74/MG_RPK74.et" {
+     coords 5.952 0.592 -7.995
+     angleX 73.527
+     angleY 85.473
+     angleZ 85.28
+    }
+    GenericEntity : "{A89BC9D55FFB4CD8}Prefabs/Weapons/MachineGuns/PKM/MG_PKM.et" {
+     coords 3.571 0.687 -12.649
+     angleX 78.242
+     angleY 114.656
+     angleZ 89.762
+    }
+    $grp GenericEntity : "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et" {
+     {
+      coords 4.902 0.298 -9.542
+     }
+     {
+      coords 5.214 0.298 -9.034
+     }
+    }
+   }
+  }
+ }
+}
