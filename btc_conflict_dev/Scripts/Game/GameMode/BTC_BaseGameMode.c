@@ -1,5 +1,3 @@
-
-//------------------------------------------------------------------------------------------------
 modded class SCR_BaseGameMode : BaseGameMode
 {
 	override void EOnInit(IEntity owner)
@@ -18,19 +16,19 @@ modded class SCR_BaseGameMode : BaseGameMode
 				GetGame().SetGameFlags(m_eTestGameFlags, false);
 			}
 		#endif
-		
+
 		//~ Remove any duplicate entries
 		if (m_aDisabledResourceTypes.IsEmpty())
 		{
 			//~ TODO: Make this cleaner
-			
+
 			set<EResourceType> duplicateRemoveSet = new set<EResourceType>();
-			
+
 			foreach (EResourceType resourceType : m_aDisabledResourceTypes)
 			{
 				duplicateRemoveSet.Insert(resourceType);
 			}
-			
+
 			m_aDisabledResourceTypes.Clear();
 			foreach (EResourceType resourceType : duplicateRemoveSet)
 			{
@@ -39,8 +37,8 @@ modded class SCR_BaseGameMode : BaseGameMode
 		}
 
 		// Find required components
-        m_RplComponent = RplComponent.Cast(owner.FindComponent(RplComponent));
-		m_pRespawnSystemComponent = SCR_RespawnSystemComponent.Cast(owner.FindComponent(SCR_RespawnSystemComponent));		
+		m_RplComponent = RplComponent.Cast(owner.FindComponent(RplComponent));
+		m_pRespawnSystemComponent = SCR_RespawnSystemComponent.Cast(owner.FindComponent(SCR_RespawnSystemComponent));
 		m_RespawnTimerComponent = SCR_RespawnTimerComponent.Cast(owner.FindComponent(SCR_RespawnTimerComponent));
 		m_ScoringSystemComponent = SCR_BaseScoringSystemComponent.Cast(owner.FindComponent(SCR_BaseScoringSystemComponent));
 		m_pGameModeHealthSettings = SCR_GameModeHealthSettings.Cast(owner.FindComponent(SCR_GameModeHealthSettings));
@@ -49,11 +47,11 @@ modded class SCR_BaseGameMode : BaseGameMode
 			Print("SCR_BaseGameMode is missing RplComponent!", LogLevel.ERROR);
 		if (!m_pRespawnSystemComponent)
 			Print("SCR_BaseGameMode is missing SCR_RespawnSystemComponent!", LogLevel.WARNING);
-		
-		if (!m_aAdditionalGamemodeComponents)
-			m_aAdditionalGamemodeComponents = new array<SCR_BaseGameModeComponent>();
 
-		array<Managed> additionalComponents = new array<Managed>();
+		if (!m_aAdditionalGamemodeComponents)
+			m_aAdditionalGamemodeComponents = {};
+
+		array<Managed> additionalComponents = {};
 		int count = owner.FindComponents(SCR_BaseGameModeComponent, additionalComponents);
 
 		m_aAdditionalGamemodeComponents.Clear();
@@ -64,7 +62,7 @@ modded class SCR_BaseGameMode : BaseGameMode
 		}
 
 		// Find and sort state components
-		array<Managed> stateComponents = new array<Managed>();
+		array<Managed> stateComponents = {};
 		int stateCount = owner.FindComponents(SCR_BaseGameModeStateComponent, stateComponents);
 		for (int i = 0; i < stateCount; i++)
 		{

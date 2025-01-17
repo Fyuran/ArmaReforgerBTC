@@ -21,12 +21,12 @@ modded class SCR_CampaignMilitaryBaseComponent : SCR_MilitaryBaseComponent
 			if (spawnpoint)
 			{
 				m_SpawnPoint = spawnpoint;
-				
-				if(!IsHQ())
+
+				if (!IsHQ())
 				{
 					spawnpoint.SetSpawnPointEnabled_S(false);
 				}
-				
+
 				SCR_CampaignBuildingProviderComponent buildingProvider = SCR_CampaignBuildingProviderComponent.Cast(GetOwner().FindComponent(SCR_CampaignBuildingProviderComponent));
 				if (buildingProvider)
 					m_SpawnPoint.SetSpawnPositionRange(buildingProvider.GetBuildingRadius());
@@ -46,7 +46,7 @@ modded class SCR_CampaignMilitaryBaseComponent : SCR_MilitaryBaseComponent
 		if (SCR_RespawnComponent.Diag_IsCLISpawnEnabled())
 			HandleSpawnPointFaction();
 #endif
-		
+
 		// Initialize registered services
 		array<SCR_ServicePointComponent> services = {};
 		GetServices(services);
@@ -104,7 +104,6 @@ modded class SCR_CampaignMilitaryBaseComponent : SCR_MilitaryBaseComponent
 			GetGame().GetCallqueue().CallLater(HandleSpawnPointFaction, SCR_GameModeCampaign.BACKEND_DELAY);
 		}
 	}
-	
 
 	//------------------------------------------------------------------------------------------------
 	//! \param[in] isHQ
@@ -126,9 +125,9 @@ modded class SCR_CampaignMilitaryBaseComponent : SCR_MilitaryBaseComponent
 				if (previousHQ.GetDisableWhenUnusedAsHQ())
 					previousHQ.Disable();
 			}
-			
+
 			SCR_SpawnPoint spawnPoint = GetSpawnPoint();
-			if(spawnPoint)
+			if (spawnPoint)
 				spawnPoint.SetSpawnPointEnabled_S(true);
 		}
 

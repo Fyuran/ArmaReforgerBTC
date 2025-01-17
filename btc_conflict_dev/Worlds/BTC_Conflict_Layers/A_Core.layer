@@ -18,10 +18,10 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
 RadioManagerEntity {
  coords 2884.968 91.924 6293.253
 }
-PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+PerceptionManager "64473070960C7279" : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 4926.701 34.279 10717.344
 }
-SCR_GameModeCampaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
+SCR_GameModeCampaign "64473070960EE4D9" : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
  components {
   SCR_DebriefingScreenComponent "{5D349E302A88E42C}" {
    m_sHeaderTitle "#AR-Campaign_ScenarioName_Everon"
@@ -48,6 +48,12 @@ SCR_GameModeCampaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Cam
    }
   }
   SCR_SaveLoadComponent "{58FA739CBE3E9FC5}" {
+   m_Struct SCR_MissionStruct "{5C6E86B1D6F0EC89}" {
+    m_Meta SCR_MetaStruct "{644AB5CDDDE0B57B}" {
+    }
+    m_Struct3 BTC_VehiclesStruct "{644AB5CDD9365E89}" {
+    }
+   }
    m_DebugHeaderResourceName "{87393F53FB2E3049}Missions/BTC_Conflict.conf"
   }
   SCR_WelcomeScreenComponent "{5D349E3E9CC39991}" {
@@ -63,7 +69,7 @@ SCR_GameModeCampaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Cam
 ScriptedChatEntity : "{536D80EB494DDC43}Prefabs/MP/Campaign/CampaignMPChatEntity.et" {
  coords 20.291 0 5.837
 }
-SCR_CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/MP/Campaign/CampaignFactionManager.et" {
+SCR_CampaignFactionManager "644730709609C75F" : "{F1AC26310BAE3788}Prefabs/MP/Campaign/CampaignFactionManager.et" {
  coords 20.291 0 5.837
  Factions {
   SCR_CampaignFaction "{50B30C3AF4BFD934}" {
@@ -73,7 +79,7 @@ SCR_CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/MP/Campaign/CampaignFact
  }
  m_EnemyFactionKey "FIA"
 }
-ItemPreviewManagerEntity {
+ItemPreviewManagerEntity "644730709609C72C" {
  coords -0.018 0 0.077
  PreviewWorld "{4391FE7994EE6FE2}Prefabs/World/Game/InventoryPreviewWorld.et"
  DefaultRenderAttributes PreviewRenderAttributes "{52EF3E2AF2E07544}" {
@@ -84,15 +90,191 @@ SCR_MapLocator {
  m_WorldDirections SCR_MapLocationQuadHint "{5AAA8B37D1168EEB}" : "{ABA21F381437DFE8}Configs/Map/MapLocatorHints/LocationHintsEveron.conf" {
  }
 }
+GenericEntity : "{01BD86DA804B1E37}Prefabs/Characters/Vests/Vest_ALICE/Vest_ALICE_suspenders_base.et" {
+ coords 5695.541 28.401 10154.147
+}
+GenericEntity TestBackpack : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
+ coords 5692.96 28.298 10153.386
+}
+GenericEntity TestMorphine : "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" {
+ coords 5693.806 28.37 10154.144
+}
+GenericEntity TestMag : "{11B9CC1FB4AEE740}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Base.et" {
+ coords 5694.771 28.389 10154.157
+}
 SCR_BaseTaskManager : "{17E3EF2CF455460F}Prefabs/MP/Campaign/CampaignTaskManager.et" {
  coords 20.724 0 7.936
 }
-BasePreloadManager : "{32BFDCDE99092FCE}Prefabs/World/Game/PreloadManager_Campaign.et" {
+GenericEntity TestVest : "{2835A0EA3B79E63E}Prefabs/Characters/Vests/Vest_ALICE/Variants/Vest_ALICE_rifleman.et" {
+ components {
+  ClothNodeStorageComponent "{52A09470BE81F96F}" {
+   Attributes SCR_ItemAttributeCollection "{52A0944E70CC0C82}" {
+    ItemDisplayName UIInfo "{52A0944E764742DB}" {
+     Name "#AR-LBS_ALICE_Standard_Name"
+     Description "#AR-LBS_ALICE_Standard_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{52CAB3AA9886E184}" {
+     Weight 2
+     SizeSetupStrategy Manual
+     ItemDimensions 15 15 15
+     ItemVolume 5000
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{5548EEFB1794CE4E}" {
+      CameraDistanceToItem 4
+      CameraOffset 0 0.05 0
+      FOV 10
+      PreviewWornModel 1
+     }
+    }
+    m_Size SLOT_2x2
+   }
+   Priority 10
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 3300
+   MaxItemSize 15 15 15
+  }
+  MeshObject "{5312D798A817A294}" {
+   Object "{8202B22690F0D679}Assets/Characters/Vests/Vest_ALICE/Vest_ALICE_belt_item.xob"
+  }
+  RigidBody "{5312D798AF7A9E28}" {
+   Mass 2
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{5B18D20BB92419A8}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{5B18D209080A5D15}" {
+     m_sSoundProject "{A4549939684B6820}Sounds/Items/_SharedData/PickUp/Items_PickUp_Vest.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{5B18D2091B885AE6}" {
+     m_sSoundProject "{A4549939684B6820}Sounds/Items/_SharedData/PickUp/Items_PickUp_Vest.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{5B18D20930D9E274}" {
+     m_sSoundProject "{087200FA6DF8D1D2}Sounds/Items/_SharedData/Drop/Items_Drop_Vest.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5312D798A71DFBB1}" {
+   Slots {
+    LoadoutSlotInfo "{5174C3E96ACD276B}" {
+    }
+    LoadoutSlotInfo MagPouch {
+     Offset -0.1 0.04 0.1
+     Angles -10 -38 0
+     Prefab "{E3154E0EAC48D67B}Prefabs/Items/Equipment/Accessories/Pouch_ALICE_30rnd_STANAG/Pouch_ALICE_30rnd_STANAG.et"
+     DeflatedOffset -0.1444 0.0678 0.1258
+     DeflatedAngles -9.4973 -44.8 0
+    }
+    LoadoutSlotInfo MagPouch2 {
+     Offset 0.1 0.04 0.1
+     Angles -10 38.00014 0
+     Prefab "{E3154E0EAC48D67B}Prefabs/Items/Equipment/Accessories/Pouch_ALICE_30rnd_STANAG/Pouch_ALICE_30rnd_STANAG.et"
+     DeflatedOffset 0.1391 0.0699 0.1196
+     DeflatedAngles -8.673 44.3001 0
+    }
+    LoadoutSlotInfo Etool {
+     Prefab "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et"
+     DeflatedOffset -0.1726 -0.0354 -0.1498
+     DeflatedAngles 4.3449 28.1597 -2.431
+    }
+    LoadoutSlotInfo Buttpack {
+     Prefab "{9A21918AC35AC182}Prefabs/Characters/Vests/Vest_ALICE/Vest_ALICE_buttpack.et"
+    }
+    LoadoutSlotInfo FirstAid {
+     Prefab "{02DF51DB063ABD36}Prefabs/Characters/Vests/Vest_ALICE/Vest_ALICE_firstaid.et"
+    }
+    LoadoutSlotInfo Cateen {
+     Prefab "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et"
+     DeflatedOffset 0.1767 -0.0336 -0.1492
+     DeflatedAngles 4.3917 -54.0679 1.0887
+    }
+    LoadoutSlotInfo Bayonet {
+     Prefab "{EE7FBAD35CA9D0F2}Prefabs/Items/Equipment/Accessories/Scabbard_Bayonet_M9/Scabbard_Bayonet_M9.et"
+     DeactivatePhysicsOnAtaching 1
+     DeflatedOffset 0.1872 0.071 0.0202
+     DeflatedAngles -1.9002 71.85451 -1.9816
+    }
+   }
+  }
+  ActionsManagerComponent "{53153A1F9AB97FF6}" : "{93067113EEDFF820}Prefabs/Characters/Core/Actions/ActionsManager_PickUpEquip.ct" {
+  }
+  RplComponent "{52A889F9AFAA98F2}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+ }
+ coords 5693.376 28.346 10154.013
+}
+BasePreloadManager "644730709609C999" : "{32BFDCDE99092FCE}Prefabs/World/Game/PreloadManager_Campaign.et" {
  coords 27.209 0 10.918
 }
 MusicManager : "{359452CCDBDD03F5}Prefabs/Sounds/Music/MusicManager_Campaign.et" {
  coords 0 0 0
 }
+GameEntity TestFlashlight : "{3A421547BC29F679}Prefabs/Items/Equipment/Flashlights/Flashlight_MX991/Flashlight_MX991.et" {
+ coords 5693.697 28.78 10154.517
+}
 SCR_LoadoutManager : "{58FBD035E53D95C1}Prefabs/MP/Campaign/CampaignLoadoutManager.et" {
  coords 0 0 0
+}
+$grp SCR_ChimeraCharacter : "{5EFC243926EE6808}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Randomized.et" {
+ TestSoldier_1 {
+  components {
+   ChimeraAIControlComponent "{520EA1D2DB109F34}" {
+    EnableAI 1
+   }
+  }
+  coords 5691.966 28.413 10158.244
+ }
+ TestSoldier_2 {
+  components {
+   ChimeraAIControlComponent "{520EA1D2DB109F34}" {
+    EnableAI 1
+   }
+  }
+  coords 5691.647 28.355 10156.537
+ }
+}
+GameEntity TestPants : "{6099177EBF8A16FC}Prefabs/Characters/Uniforms/Pants_M70_base.et" {
+ coords 5694.593 28.37 10153.359
+}
+GenericEntity : "{6288A1F1A5E3AC37}Prefabs/Weapons/Attachments/Muzzle/FlashHider_M16A2/FlashHider_M16.et" {
+ coords 5695.202 28.746 10154.078
+}
+GenericEntity TestCanteen : "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et" {
+ components {
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+   }
+  }
+ }
+ coords 5693.88 28.382 10154.675
+}
+GenericEntity : "{70BC751317551D9B}Prefabs/Items/Equipment/Canteens/Canteen_Soviet_01.et" {
+ coords 5694.617 28.393 10154.563
+}
+Vehicle TestVeh : "{7524FB186D534ACA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_base.et" {
+ coords 5695.368 28.45 10157.395
+}
+GenericEntity : "{9A21918AC35AC182}Prefabs/Characters/Vests/Vest_ALICE/Vest_ALICE_buttpack.et" {
+ coords 5695.033 28.37 10153.66
+}
+Vehicle Mi8MT_unarmed_base1 : "{B6B8C164FD6377EA}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_base.et" {
+ coords 5675.368 27.221 10129.061
+}
+Vehicle TestBtr : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ coords 5678.059 27.911 10147.158
+}
+GenericEntity TestPouch : "{E3154E0EAC48D67B}Prefabs/Items/Equipment/Accessories/Pouch_ALICE_30rnd_STANAG/Pouch_ALICE_30rnd_STANAG.et" {
+ coords 5694.015 28.379 10154.244
+}
+GenericEntity TestWeap : "{EF73725A81669E2C}Prefabs/Weapons/Rifles/M16/Rifle_M16A2_carbine_M203.et" {
+ coords 5694.058 28.34 10153.25
+}
+GenericEntity TestHandguard : "{FB1A7F5BC7D935E2}Prefabs/Weapons/Attachments/Handguards/Handguard_M16A2/Handguard_M16.et" {
+ coords 5694.33 28.562 10154.101
 }

@@ -9,19 +9,19 @@ modded class SCR_GarbageSystem : GarbageSystem
 		else
 			return true;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	override protected float OnInsertRequested(IEntity entity, float lifetime)
 	{
 		SCR_GameModeCampaign gameMode = SCR_GameModeCampaign.Cast(GetGame().GetGameMode());
-		
+
 		lifetime = super.OnInsertRequested(entity, lifetime);
-		
-		if(gameMode) 
-		{	
+
+		if (gameMode)
+		{
 			if (Vehicle.Cast(entity) && IsEntityAlive(entity))
 			{
-				if(gameMode.GetPreventRemoveVehicles())
+				if (gameMode.GetPreventRemoveVehicles())
 				{
 					lifetime = -1;
 				}
