@@ -28,15 +28,15 @@ class BTC_HitZonesStruct
 
 		if (hitZones.IsEmpty())
 			return;
-		
+
 		BTC_HitZoneStruct struct;
 		foreach (HitZone hitZone : hitZones)
 		{
 			struct = m_Structs.Get(hitZone.GetName());
-			
+
 			if (!struct)
 				continue;
-			
+
 			struct.Deserialize(hitZone);
 		}
 	}

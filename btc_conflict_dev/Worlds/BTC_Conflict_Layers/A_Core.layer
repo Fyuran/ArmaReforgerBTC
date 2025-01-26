@@ -49,12 +49,11 @@ SCR_GameModeCampaign "64473070960EE4D9" : "{3B230AAC5252108F}Prefabs/MP/Modes/Co
   }
   SCR_SaveLoadComponent "{58FA739CBE3E9FC5}" {
    m_Struct SCR_MissionStruct "{5C6E86B1D6F0EC89}" {
-    m_Meta SCR_MetaStruct "{644AB5CDDDE0B57B}" {
+    m_Meta SCR_MetaStruct "{647503A9FBA19967}" {
     }
-    m_Struct3 BTC_VehiclesStruct "{644AB5CDD9365E89}" {
+    m_Struct3 BTC_Struct "{647503A80DA7A02F}" {
     }
    }
-   m_DebugHeaderResourceName "{87393F53FB2E3049}Missions/BTC_Conflict.conf"
   }
   SCR_WelcomeScreenComponent "{5D349E3E9CC39991}" {
    m_sHeaderTitle "#AR-Campaign_ScenarioName_Everon"

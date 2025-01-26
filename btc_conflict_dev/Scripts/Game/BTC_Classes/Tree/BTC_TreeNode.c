@@ -9,7 +9,7 @@ typedef ScriptInvokerBase<OnNodeRemoved> ScriptInvokerOnNodeRemoved;
 class BTC_TreeNode
 {
 	protected static int s_iID = -1;
-	
+
 	protected int m_iLevel = 0;
 	protected int m_iID = 0;
 	protected BTC_TreeNode m_Parent;
@@ -41,21 +41,21 @@ class BTC_TreeNode
 	{
 		s_iID = -1;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Method used by SCR_JsonSaveContext
 	bool SerializationSave(BaseSerializationSaveContext context)
 	{
 		if (!context.IsValid())
 			return false;
-		
+
 		context.WriteValue("m_iID", m_iID);
 		context.WriteValue("m_iParentID", m_iParentID);
 		context.WriteValue("m_aChildren", m_aChildren);
-		
+
 		return true;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Method used by SCR_JsonLoadContext
 	bool SerializationLoad(BaseSerializationLoadContext context)
@@ -67,22 +67,22 @@ class BTC_TreeNode
 		context.ReadValue("m_iParentID", m_iParentID);
 		context.ReadValue("m_aChildren", m_aChildren);
 		SerializationLoadChildren();
-		
-		if(m_iID > s_iID) //raise class' static int counter to the highest recorded
+
+		if (m_iID > s_iID) //raise class' static int counter to the highest recorded
 			s_iID = m_iID;
-		
+
 		return true;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	void SerializationLoadChildren()
 	{
-		foreach(BTC_TreeNode child : m_aChildren)
+		foreach (BTC_TreeNode child : m_aChildren)
 		{
 			child.m_Parent = this;
 		}
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Adds a child and increments the child's level by (current + 1)
 	bool InsertChild(BTC_TreeNode node)
@@ -101,7 +101,7 @@ class BTC_TreeNode
 		}
 		if (m_OnNodeRemoved)
 			node.m_OnNodeRemoved = m_OnNodeRemoved; //pass the invoker down the hierarchy
-		
+
 		return this.m_aChildren.Insert(node);
 	}
 
@@ -173,21 +173,21 @@ class BTC_TreeNode
 		outNode.m_Parent = this.m_Parent;
 		outNode.m_iParentID = this.m_iParentID;
 		outNode.m_aChildren = this.m_aChildren;
-		
-		if(m_OnNodeInserted)
+
+		if (m_OnNodeInserted)
 			outNode.m_OnNodeInserted = this.m_OnNodeInserted;
-		if(m_OnNodeRemoved)
+		if (m_OnNodeRemoved)
 			outNode.m_OnNodeRemoved = this.m_OnNodeRemoved;
-			
-	}	
-	
+
+	}
+
 	//------------------------------------------------------------------------------------------------
 	//! Gets all children of current node
 	array<ref BTC_TreeNode> GetChildren()
 	{
 		return m_aChildren;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Gets all siblings at current node level
 	array<ref BTC_TreeNode> GetSiblings()
@@ -207,13 +207,13 @@ class BTC_TreeNode
 	{
 		return m_iID;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	int GetParentID()
 	{
 		return m_iParentID;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Traverses the hierarchy backwards to reach root node
 	BTC_TreeNode GetRoot()
@@ -235,7 +235,7 @@ class BTC_TreeNode
 	{
 		return m_Parent;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	void BTC_TreeNode()
 	{

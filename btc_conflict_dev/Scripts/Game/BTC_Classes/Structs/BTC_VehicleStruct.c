@@ -1,7 +1,7 @@
 class BTC_VehicleStruct : BTC_EntityStruct
 {
 	protected ref BTC_FuelNodesStruct m_FuelStruct;
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Method used by SCR_JsonSaveContext
 	override bool SerializationSave(BaseSerializationSaveContext context)
@@ -15,9 +15,9 @@ class BTC_VehicleStruct : BTC_EntityStruct
 		context.WriteValue("m_StoragesTree", m_StoragesTree);
 		context.WriteValue("m_vTransform", m_vTransform);
 		context.WriteValue("m_FuelStruct", m_FuelStruct);
-		
+
 		ResetIDCounter();
-		
+
 		return true;
 	}
 
@@ -34,37 +34,37 @@ class BTC_VehicleStruct : BTC_EntityStruct
 		context.ReadValue("m_StoragesTree", m_StoragesTree);
 		context.ReadValue("m_vTransform", m_vTransform);
 		context.ReadValue("m_FuelStruct", m_FuelStruct);
-		
+
 		if (m_iID > s_iID) //raise class' static int counter to the highest recorded
 			s_iID = m_iID;
 
 		ResetIDCounter();
-		
+
 		return true;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	override void Serialize(notnull IEntity entity)
 	{
 		m_sPrefabResourceName = GetEntityResourceName(entity);
 		entity.GetTransform(m_vTransform);
-		
+
 		Vehicle vehicle = Vehicle.Cast(entity);
-		if(!vehicle)
+		if (!vehicle)
 			return;
-		
+
 		SerializeHitZones(vehicle);
 		SerializeStorages(vehicle);
 		SerializeFuelNodes(vehicle);
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	override void Deserialize()
 	{
 		Vehicle vehicle = Vehicle.Cast(SpawnEntity());
 		if (!vehicle)
 			return;
-		
+
 		DeserializeHitZones(vehicle);
 		DeserializeStorages(vehicle);
 		DeserializeFuelNodes(vehicle);
@@ -76,14 +76,14 @@ class BTC_VehicleStruct : BTC_EntityStruct
 		SCR_FuelManagerComponent fuelManager = vehicle.GetScriptedFuelManager();
 		m_FuelStruct = BTC_FuelNodesStruct.Serialize(fuelManager);
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	void DeserializeFuelNodes(Vehicle vehicle)
 	{
 		SCR_FuelManagerComponent fuelManager = vehicle.GetScriptedFuelManager();
 		m_FuelStruct.Deserialize(fuelManager);
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	override IEntity SpawnEntity()
 	{

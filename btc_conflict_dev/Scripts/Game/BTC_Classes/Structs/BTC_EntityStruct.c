@@ -22,7 +22,7 @@ class BTC_EntityStruct
 		context.WriteValue("m_vTransform", m_vTransform);
 
 		ResetIDCounter();
-		
+
 		return true;
 	}
 
@@ -43,7 +43,7 @@ class BTC_EntityStruct
 			s_iID = m_iID;
 
 		ResetIDCounter();
-		
+
 		return true;
 	}
 
@@ -72,9 +72,9 @@ class BTC_EntityStruct
 		BaseInventoryStorageComponent storageComp = BaseInventoryStorageComponent.Cast(entity.FindComponent(BaseInventoryStorageComponent));
 		if (!storageComp)
 			return;
-		
+
 		m_StoragesTree = new BTC_StorageTreeNode();
-		BTC_StorageTreeNode.Serialize(entity, m_StoragesTree);
+		m_StoragesTree.Serialize(entity);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -83,7 +83,7 @@ class BTC_EntityStruct
 		IEntity entity = SpawnEntity();
 		if (!entity)
 			return;
-		
+
 		DeserializeHitZones(entity);
 		DeserializeStorages(entity);
 	}
@@ -91,13 +91,13 @@ class BTC_EntityStruct
 	//------------------------------------------------------------------------------------------------
 	static ResourceName GetEntityResourceName(IEntity entity)
 	{
-		if(!entity)
+		if (!entity)
 			return "NULL_OWNER_PREFAB_NAME";
-		
+
 		ResourceName entityResourceName = SCR_BaseContainerTools.GetPrefabResourceName(entity.GetPrefabData().GetPrefab());
 		return entityResourceName;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	IEntity SpawnEntity()
 	{
@@ -109,20 +109,20 @@ class BTC_EntityStruct
 		IEntity entity = GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params);
 		if (!entity)
 			return null;
-	
+
 		Physics physics = entity.GetPhysics();
 		if (physics)
-		    physics.SetActive(ActiveState.ACTIVE);
-		
+			physics.SetActive(ActiveState.ACTIVE);
+
 		return entity;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	protected void DeserializeHitZones(notnull IEntity entity)
 	{
-		if(!m_HitZonesStruct)
+		if (!m_HitZonesStruct)
 			return;
-		
+
 		DamageManagerComponent damageManager = DamageManagerComponent.Cast(entity.FindComponent(DamageManagerComponent));
 		if (!damageManager)
 			return;
@@ -133,14 +133,14 @@ class BTC_EntityStruct
 	//------------------------------------------------------------------------------------------------
 	protected void DeserializeStorages(notnull IEntity entity)
 	{
-		if(!m_StoragesTree)
+		if (!m_StoragesTree)
 			return;
-		
+
 		InventoryStorageManagerComponent storageManager = InventoryStorageManagerComponent.Cast(entity.FindComponent(InventoryStorageManagerComponent));
 		if (!storageManager)
 			return;
-		
-		BTC_StorageTreeNode.Deserialize(entity, m_StoragesTree);
+
+		m_StoragesTree.Deserialize(entity);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -200,7 +200,7 @@ class BTC_EntityStruct
 	{
 		s_iID = -1;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	void BTC_EntityStruct()
 	{

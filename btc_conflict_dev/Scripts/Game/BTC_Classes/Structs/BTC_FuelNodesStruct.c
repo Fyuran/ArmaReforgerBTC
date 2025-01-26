@@ -32,10 +32,10 @@ class BTC_FuelNodesStruct
 		foreach (SCR_FuelNode fuelNode : fuelNodes)
 		{
 			BTC_FuelNodeStruct struct = m_Structs.Get(fuelNode.GetFuelTankID());
-			
+
 			if (!struct)
 				continue;
-			
+
 			struct.Deserialize(fuelNode);
 		}
 	}
