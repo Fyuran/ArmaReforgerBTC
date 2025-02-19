@@ -1,0 +1,3 @@
+SubScene {
+ Parent "{E0921D98288D2E38}Worlds/BTC_TestDevWorld.ent"
+}

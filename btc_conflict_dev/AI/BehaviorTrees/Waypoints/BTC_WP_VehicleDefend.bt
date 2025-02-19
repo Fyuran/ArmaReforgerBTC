@@ -1,0 +1,660 @@
+BehaviorTree "{642B633D8F0B93E7}AI/BehaviorTrees/Waypoints/BTC_WP_VehicleDefend.bt" {
+ Name "AI/BehaviorTrees/Waypoints/BTC_WP_VehicleDefend.bt"
+ Nodes {
+  RootNode Root {
+   Name "Root"
+   EditorPos -100.389 -536.876
+   Nodes {
+    Sequence Sequence {
+     Name "Sequence"
+     EditorPos -108.515 -270.909
+     Nodes {
+      Sequence Sequence {
+       Name "Sequence"
+       EditorPos -1508.75 -30.5
+       Nodes {
+        BTC_AIGetVehicleDefendWaypointParameters "BTC_AI Get Vehicle Defend Waypoint Parameters" {
+         Name "BTC_AI Get Vehicle Defend Waypoint Parameters"
+         EditorPos -2032 192
+         InPorts {
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "WaypointIn"
+          }
+         }
+         OutPorts {
+          SingleOutputPortContainer SingleOutputPortContainer {
+           Port 1
+           PortName "WaypointOut"
+          }
+          SingleOutputPortContainer SingleOutputPortContainer {
+           Port -1
+           PortName "Radius"
+          }
+          SingleOutputPortContainer SingleOutputPortContainer {
+           Port -1
+           PortName "Origin"
+          }
+          SingleOutputPortContainer SingleOutputPortContainer {
+           Port 20
+           PortName "PriorityLevel"
+          }
+          SingleOutputPortContainer SingleOutputPortContainer {
+           Port 0
+           PortName "HoldingTime"
+          }
+         }
+        }
+        AITaskSetVariable "Set Variable" {
+         Name "Set Variable"
+         EditorPos -1152 240
+         SetValue "true"
+         OutVariable 24
+        }
+        BTC_AISendGoalMessage_VehicleDefend "BTC_AI Send Goal Message_ Vehicle Defend" {
+         Name "BTC_AI Send Goal Message_ Vehicle Defend"
+         EditorPos -416 224
+         InPorts {
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "Receiver"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port 26
+           PortName "PriorityLevel"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "IsWaypointRelated"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "DefendDirection"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "DefendAngularRange"
+          }
+         }
+         m_bIsWaypointRelated 1
+        }
+       }
+      }
+      Selector Selector {
+       Name "Selector"
+       EditorPos 2000.417 172.5
+       Nodes {
+        DecoTestVariable "Test Variable" {
+         Name "Enemies detected?"
+         EditorPos 973.313 503.647
+         Nodes {
+          Selector Selector {
+           Name "Selector"
+           EditorPos 1137.579 678.96
+           Nodes {
+            SCR_AIDecoIsEnemyWithinRadius "SCR_AI Deco Is Enemy Within Radius" {
+             Name "SCR_AI Deco Is Enemy Within Radius"
+             EditorPos 932.758 831.389
+             Nodes {
+              Sequence Sequence {
+               Name "Sequence"
+               EditorPos 1038.381 1028.381
+               Nodes {
+                SCR_AIPrintDebug "SCR_AI Print Debug" {
+                 Name "SCR_AI Print Debug"
+                 EditorPos 565 1276.667
+                 InPorts {
+                  SingleInputPortContainer SingleInputPortContainer {
+                   Port -1
+                   PortName "DebugMessage"
+                  }
+                 }
+                 m_bIncludeMe 1
+                 m_sDebugMessage "Defend under attack!"
+                }
+                AITaskSetVariable "Set Variable" {
+                 Name "Set Variable"
+                 EditorPos 787.917 1268.666
+                 SetValue "true"
+                 OutVariable 21
+                 InVariable -1
+                }
+                AITaskSetVariable "Set Variable" {
+                 Name "Set Variable"
+                 EditorPos 1019.346 1265.809
+                 SetValue "false"
+                 OutVariable 22
+                 InVariable -1
+                }
+                AITaskReturnState "Return State" {
+                 Name "Return State"
+                 EditorPos 1241.606 1257.463
+                 Result RUNNING
+                }
+               }
+              }
+             }
+             InPorts {
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "WaypointIn"
+              }
+             }
+             OutPorts {
+              SingleOutputPortContainer SingleOutputPortContainer {
+               Port -1
+               PortName "LocationOut"
+              }
+             }
+             NegativeCondition 1
+             UseChildResult 1
+             AbortType AbortChildrenBranchAndParentFurtherChildren
+            }
+            AITaskReturnState "Return State" {
+             Name "Return State"
+             EditorPos 1356.249 807.999
+             Result RUNNING
+            }
+           }
+          }
+         }
+         UseChildResult 1
+         AbortType AbortChildrenBranchAndParentFurtherChildren
+         InVariable 17
+         TestType EqualsValue
+         TestValue "true"
+        }
+        SCR_AIDecoIsEnemyWithinRadius "SCR_AI Deco Is Enemy Within Radius" {
+         Name "Detected new enemy?"
+         EditorPos 2001.329 506.056
+         Nodes {
+          Selector Selector {
+           Name "Selector"
+           EditorPos 2061.329 683.96
+           Nodes {
+            DecoTestVariable "Test Variable" {
+             Name "Test Variable"
+             EditorPos 1989.777 844.539
+             Nodes {
+              Sequence Sequence {
+               Name "Sequence"
+               EditorPos 2033.381 1065.635
+               Nodes {
+                BTC_AISetVehicleDefendActivityParameters "BTC_AI Set Vehicle Defend Activity Parameters" {
+                 Name "BTC_AI Set Vehicle Defend Activity Parameters"
+                 EditorPos 1712 1280
+                 InPorts {
+                  SingleInputPortContainer SingleInputPortContainer {
+                   Port -1
+                   PortName "WaypointRelated"
+                  }
+                  SingleInputPortContainer SingleInputPortContainer {
+                   Port -1
+                   PortName "PriorityLevel"
+                  }
+                 }
+                }
+                SCR_AITalk "SCR_AI Talk" {
+                 Name "SCR_AI Talk"
+                 EditorPos 2192 1280
+                 InPorts {
+                  SingleInputPortContainer SingleInputPortContainer {
+                   Port -1
+                   PortName "SpeakerIn"
+                  }
+                  SingleInputPortContainer SingleInputPortContainer {
+                   Port -1
+                   PortName "TargetIn"
+                  }
+                  SingleInputPortContainer SingleInputPortContainer {
+                   Port -1
+                   PortName "LocationIn"
+                  }
+                  SingleInputPortContainer SingleInputPortContainer {
+                   Port -1
+                   PortName "EnumIn"
+                  }
+                 }
+                 m_messageType REPORT_DEFEND
+                 m_ePreset MANDATORY
+                 m_bSynchronous 1
+                 m_bTransmitIfPassenger 0
+                }
+                AITaskSetVariable "Set Variable" {
+                 Name "Set Variable"
+                 EditorPos 2368.028 1285.532
+                 SetValue "true"
+                 OutVariable 9
+                 InVariable -1
+                }
+                AITaskSetVariable "Set Variable" {
+                 Name "Set Variable"
+                 EditorPos 2656.887 1300.74
+                 SetValue "true"
+                 OutVariable 15
+                }
+                AITaskReturnState "Return State" {
+                 Name "Return State"
+                 EditorPos 2943.218 1286.645
+                 Result RUNNING
+                }
+               }
+              }
+             }
+             NegativeCondition 1
+             UseChildResult 1
+             ForceNodeResult Success
+             InVariable 18
+             TestType EqualsValue
+             TestValue "true"
+            }
+            AITaskReturnState "Return State" {
+             Name "Return State"
+             EditorPos 2242.916 846.332
+             Result RUNNING
+            }
+           }
+          }
+         }
+         InPorts {
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "WaypointIn"
+          }
+         }
+         OutPorts {
+          SingleOutputPortContainer SingleOutputPortContainer {
+           Port 25
+           PortName "LocationOut"
+          }
+         }
+         UseChildResult 1
+         AbortType AbortParentNodeFurtherChildren
+        }
+        DecoTestVariable "Test Variable" {
+         Name "Restart waypoint clock?"
+         EditorPos 3082.714 514.428
+         Nodes {
+          Sequence Sequence {
+           Name "Sequence"
+           EditorPos 3186 780
+           Nodes {
+            AITaskSetVariable "Set Variable" {
+             Name "Set Variable"
+             EditorPos 2657.167 961.334
+             SetValue "false"
+             ClearVariable 0
+             OutVariable 7
+            }
+            AITaskSetVariable "Set Variable" {
+             Name "Set Variable"
+             EditorPos 2904 954.667
+             SetValue "true"
+             OutVariable 10
+            }
+            AITaskSetVariable "Set Variable" {
+             Name "Set Variable"
+             EditorPos 3139.239 953.953
+             SetValue "true"
+             OutVariable 23
+            }
+            AITaskSetVariable "Set Variable" {
+             Name "Set Variable"
+             EditorPos 3372.889 953.278
+             SetValue "false"
+             OutVariable 6
+            }
+            AITaskReturnState "Return State" {
+             Name "Return State"
+             EditorPos 3636.964 940.214
+             Result RUNNING
+            }
+           }
+          }
+         }
+         UseChildResult 1
+         AbortType AbortChildrenBranchAndParentFurtherChildren
+         InVariable 4
+         TestType EqualsValue
+         TestValue "true"
+        }
+        DecoTestVariable "Test Variable" {
+         Name "Should move back to radius?"
+         EditorPos 4266.333 522.88
+         Nodes {
+          Sequence Sequence {
+           Name "Sequence"
+           EditorPos 4372.856 710.953
+           Nodes {
+            SCR_AITalk "SCR_AI Talk" {
+             Name "SCR_AI Talk"
+             EditorPos 4064 1008
+             InPorts {
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "SpeakerIn"
+              }
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "TargetIn"
+              }
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "LocationIn"
+              }
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "EnumIn"
+              }
+             }
+             m_messageType REPORT_DEFEND
+             m_ePreset MANDATORY
+             m_bSynchronous 1
+             m_bTransmitIfPassenger 0
+            }
+            AITaskSetVariable "Set Variable" {
+             Name "Set Variable"
+             EditorPos 4288 1008
+             SetValue "false"
+             OutVariable 11
+            }
+            AITaskReturnState "Return State" {
+             Name "Return State"
+             EditorPos 4576 992
+             Result RUNNING
+            }
+           }
+          }
+         }
+         UseChildResult 1
+         AbortType AbortChildrenBranchAndParentFurtherChildren
+         InVariable 5
+         TestType EqualsValue
+         TestValue "true"
+        }
+        DecoTestVariable "Test Variable" {
+         Name "Complete the waypoint?"
+         EditorPos 5832.263 559
+         Nodes {
+          Sequence Sequence {
+           Name "Sequence"
+           EditorPos 5946.905 769.643
+           Nodes {
+            SCR_AIPrintDebug "SCR_AI Print Debug" {
+             Name "SCR_AI Print Debug"
+             EditorPos 5771.429 932.975
+             InPorts {
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "DebugMessage"
+              }
+             }
+             m_bIncludeMe 1
+             m_sDebugMessage "Defend waypoint completed"
+            }
+            SCR_AICompleteWaypoint "SCR_AI Complete Waypoint" {
+             Name "SCR_AI Complete Waypoint"
+             EditorPos 5981.536 945.846
+             InPorts {
+              SingleInputPortContainer SingleInputPortContainer {
+               Port 19
+               PortName "WaypointIn"
+              }
+             }
+            }
+            AITaskReturnState "Return State" {
+             Name "Return State"
+             EditorPos 6272.488 943.5
+             Result RUNNING
+            }
+           }
+          }
+         }
+         UseChildResult 1
+         AbortType AbortChildrenBranchAndParentFurtherChildren
+         InVariable 8
+         TestType EqualsValue
+         TestValue "true"
+        }
+        DecoTestVariable "Test Variable" {
+         Name "Test Variable"
+         EditorPos 7257.31 514.905
+         Nodes {
+          Sequence Sequence {
+           Name "Sequence"
+           EditorPos 7276.333 729.333
+           Nodes {
+            SCR_AIPrintDebug "SCR_AI Print Debug" {
+             Name "SCR_AI Print Debug"
+             EditorPos 6528.954 884.761
+             InPorts {
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "DebugMessage"
+              }
+             }
+             m_bIncludeMe 1
+             m_sDebugMessage "Started holding time count."
+            }
+            SCR_AITaskTimerGate "SCR_AI Task Timer Gate" {
+             Name "SCR_AI Task Timer Gate"
+             EditorPos 7003.333 901.547
+             InPorts {
+              SingleInputPortContainer SingleInputPortContainer {
+               Port 3
+               PortName "Time"
+              }
+              SingleInputPortContainer SingleInputPortContainer {
+               Port 12
+               PortName "ResetTime"
+              }
+             }
+             OutPorts {
+              SingleOutputPortContainer SingleOutputPortContainer {
+               Port 13
+               PortName "Trigger"
+              }
+              SingleOutputPortContainer SingleOutputPortContainer {
+               Port 14
+               PortName "ElapsedTime"
+              }
+              SingleOutputPortContainer SingleOutputPortContainer {
+               Port 2
+               PortName "ResetTimeOut"
+              }
+             }
+            }
+            AITaskReturnState "Return State" {
+             Name "Return State"
+             EditorPos 7705.833 905.833
+             Result RUNNING
+            }
+           }
+          }
+         }
+         NegativeCondition 1
+         UseChildResult 1
+         InVariable 16
+         TestType EqualsValue
+         TestValue "true"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Variables {
+  Variable currentWaypoint {
+   VariableName "currentWaypoint"
+   VariableTypeName "AIWaypoint"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable restartWaypoint {
+   VariableName "restartWaypoint"
+   VariableTypeName "bool"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable waypointHoldingTime {
+   VariableName "waypointHoldingTime"
+   VariableTypeName "float"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable isHoldingTimeDone {
+   VariableName "isHoldingTimeDone"
+   VariableTypeName "bool"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable elapsedTime {
+   VariableName "elapsedTime"
+   VariableTypeName "float"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable resetTime {
+   VariableName "resetTime"
+   VariableTypeName "bool"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable moveBackToWaypoint {
+   VariableName "moveBackToWaypoint"
+   VariableTypeName "bool"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable enemyDetected {
+   VariableName "enemyDetected"
+   VariableTypeName "bool"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable priorityLevel {
+   VariableName "priorityLevel"
+   VariableTypeName "float"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable location {
+   VariableName "location"
+   VariableTypeName "vector"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+ }
+ VariablesRefs {
+  VariableReference waypointHoldingTime {
+   VariableType 2
+   EditorPos -1474.964 419.873
+  }
+  VariableReference currentWaypoint {
+   VariableType 0
+   EditorPos -1489.697 229.068
+  }
+  VariableReference resetTime {
+   VariableType 5
+   EditorPos 7315.12 1120.476
+  }
+  VariableReference waypointHoldingTime {
+   VariableType 2
+   EditorPos 6704.821 950.464
+  }
+  VariableReference restartWaypoint {
+   VariableType 1
+   EditorPos 2774.429 650.857
+  }
+  VariableReference moveBackToWaypoint {
+   VariableType 6
+   EditorPos 3945.833 658.333
+  }
+  VariableReference restartWaypoint {
+   VariableType 1
+   EditorPos 3591.334 1101.333
+  }
+  VariableReference isHoldingTimeDone {
+   VariableType 3
+   EditorPos 2772.917 1102.584
+  }
+  VariableReference isHoldingTimeDone {
+   VariableType 3
+   EditorPos 5543 690
+  }
+  VariableReference restartWaypoint {
+   VariableType 1
+   EditorPos 2531.297 1446.897
+  }
+  VariableReference resetTime {
+   VariableType 5
+   EditorPos 3106.667 1106.667
+  }
+  VariableReference moveBackToWaypoint {
+   VariableType 6
+   EditorPos 4544 1152
+  }
+  VariableReference resetTime {
+   VariableType 5
+   EditorPos 6752.5 1050.618
+  }
+  VariableReference isHoldingTimeDone {
+   VariableType 3
+   EditorPos 7310.833 914.583
+  }
+  VariableReference elapsedTime {
+   VariableType 4
+   EditorPos 7316.547 1016.19
+  }
+  VariableReference enemyDetected {
+   VariableType 7
+   EditorPos 2882.332 1454.025
+  }
+  VariableReference enemyDetected {
+   VariableType 7
+   EditorPos 6993.167 663.834
+  }
+  VariableReference enemyDetected {
+   VariableType 7
+   EditorPos 666.937 699.286
+  }
+  VariableReference enemyDetected {
+   VariableType 7
+   EditorPos 1747.191 983.667
+  }
+  VariableReference currentWaypoint {
+   VariableType 0
+   EditorPos 5736.096 1081.393
+  }
+  VariableReference priorityLevel {
+   VariableType 8
+   EditorPos -1456.187 316.364
+  }
+  VariableReference restartWaypoint {
+   VariableType 1
+   EditorPos 966.428 1403.571
+  }
+  VariableReference enemyDetected {
+   VariableType 7
+   EditorPos 1240.714 1402.143
+  }
+  VariableReference moveBackToWaypoint {
+   VariableType 6
+   EditorPos 3285.833 1108.333
+  }
+  VariableReference restartWaypoint {
+   VariableType 1
+   EditorPos -929.143 391.714
+  }
+  VariableReference location {
+   VariableType 9
+   EditorPos 2360 655
+  }
+  VariableReference priorityLevel {
+   VariableType 8
+   EditorPos -668.899 391.507
+  }
+ }
+}

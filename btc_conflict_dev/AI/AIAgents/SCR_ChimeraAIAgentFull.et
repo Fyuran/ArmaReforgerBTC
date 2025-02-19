@@ -1,0 +1,12 @@
+SCR_ChimeraAIAgent {
+ ID "50C4E8413B94E8B0"
+ components {
+  SCR_AIConfigComponent "{5122F2C32CDD251C}" {
+   m_aGoalReactions {
+    BTC_AIGoalReaction_LookAt "{648CE04D3156C76E}" {
+     m_eType LOOK_AT
+    }
+   }
+  }
+ }
+}

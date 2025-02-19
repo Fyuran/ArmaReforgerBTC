@@ -1,0 +1,7 @@
+HeightMapImportDescClass {
+ FileName "C:/Users/danke/Desktop/download.png"
+ Flags 0
+ MinHeight -1000000
+ ResampleMinHeight 0
+ ResampleMaxHeight 15
+}

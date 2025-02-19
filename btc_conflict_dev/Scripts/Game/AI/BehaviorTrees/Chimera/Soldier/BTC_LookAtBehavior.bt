@@ -1,0 +1,87 @@
+BehaviorTree {
+ Name "Scripts/Game/AI/BehaviorTrees/Chimera/Soldier/BTC_LookAtBehavior.bt"
+ Nodes {
+  RootNode Root {
+   Name "Root"
+   EditorPos -50 -45
+   Nodes {
+    Sequence Sequence {
+     Name "Sequence"
+     EditorPos -54 88
+     Nodes {
+      BTC_AIGetLookAtBehaviorParameters "BTC_AI Get Look At Behavior Parameters" {
+       Name "BTC_AI Get Look At Behavior Parameters"
+       EditorPos -1444.5 395
+       OutPorts {
+        SingleOutputPortContainer SingleOutputPortContainer {
+         Port 0
+         PortName "LookAtPos"
+        }
+        SingleOutputPortContainer SingleOutputPortContainer {
+         Port 1
+         PortName "Waypoint"
+        }
+       }
+      }
+      Decorator Decorator {
+       Name "Invert"
+       EditorPos -489.333 393.667
+       Nodes {
+        AITaskCharacterAim "Character Aim" {
+         Name "Character Aim"
+         EditorPos -467.333 543.667
+         InAimAtPosition 2
+         Timeout 1
+        }
+       }
+       ForceNodeResult Success
+      }
+      SCR_AICompleteAction "SCR_AI Complete Action" {
+       Name "SCR_AI Complete Action"
+       EditorPos 2.222 410
+      }
+      SCR_AIPrintDebug "SCR_AI Print Debug" {
+       Name "SCR_AI Print Debug"
+       EditorPos 472.222 403.333
+       InPorts {
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "DebugMessage"
+        }
+       }
+       m_sDebugMessage "Looked at"
+      }
+     }
+    }
+   }
+  }
+ }
+ Variables {
+  Variable lookAtPos {
+   VariableName "lookAtPos"
+   VariableTypeName "vector"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable waypoint {
+   VariableName "waypoint"
+   VariableTypeName "AIWaypoint"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+ }
+ VariablesRefs {
+  VariableReference lookAtPos {
+   VariableType 0
+   EditorPos -930.5 416
+  }
+  VariableReference waypoint {
+   VariableType 1
+   EditorPos -966.5 529
+  }
+  VariableReference lookAtPos {
+   VariableType 0
+   EditorPos -674.445 549.445
+  }
+ }
+}

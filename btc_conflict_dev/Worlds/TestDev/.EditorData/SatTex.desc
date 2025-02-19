@@ -1,0 +1,7 @@
+SatGenDescClass {
+ FileName "C:/Users/danke/OneDrive/Documents/My Games/ArmaReforgerWorkbench/addons/btc_conflict_dev/Worlds/TestDev/TestDev_base.png"
+ sRGBOutput 1
+ RenderRoads 1
+ Interpolation bilinear
+ RoadsAA "8x"
+}

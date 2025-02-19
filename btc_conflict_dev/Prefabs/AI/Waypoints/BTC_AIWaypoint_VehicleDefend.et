@@ -1,0 +1,14 @@
+BTC_VehicleDefendWaypoint {
+ ID "64909B5C9C20451D"
+ coords 451.149 23.565 464.531
+ Type "Vehicle Defend"
+ Title "Vehicle Defend waypoint"
+ AIBehaviorTree "{8ED3430293D16C93}AI/BehaviorTrees/Chimera/Group/BTC_ActivityVehicleDefend.bt"
+ AIBehaviorTreeMoveTo "{642B633D8F0B93E7}AI/BehaviorTrees/Waypoints/BTC_WP_VehicleDefend.bt"
+ CompletionRadius 100
+ Autocomplete 0
+ CompletionType Leader
+ m_TimedWaypointParameters SCR_AITimedWaypointParameters "{64909B5CBA425D99}" {
+  m_holdingTime -1
+ }
+}

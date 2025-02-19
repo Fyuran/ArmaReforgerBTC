@@ -1,0 +1,13 @@
+GenericEntity : "{DB052227F8E5500B}Prefabs/Systems/AmbientVehicles/BTC_AmbientVehicleSpawnBase.et" {
+ ID "647B07CC7BDD84A6"
+ components {
+  BTC_AmbientActiveVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
+   m_aVehiclePrefabs {
+    "{F6B23D17D5067C11}Prefabs/Vehicles/Wheeled/M151A2/M151A2_M2HB.et" "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et" "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+   }
+  }
+  SCR_FactionAffiliationComponent "{647B07CB5722D3A3}" {
+   "faction affiliation" "US"
+  }
+ }
+}

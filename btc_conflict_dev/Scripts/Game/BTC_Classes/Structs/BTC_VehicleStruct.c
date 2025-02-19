@@ -92,6 +92,9 @@ class BTC_VehicleStruct : BTC_EntityStruct
 		params.Transform = m_vTransform;
 
 		Resource resource = Resource.Load(m_sPrefabResourceName);
+		if (!resource || !resource.IsValid())
+			return null;
+
 		Vehicle vehicle = Vehicle.Cast(GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params));
 		if (!vehicle)
 			return null;

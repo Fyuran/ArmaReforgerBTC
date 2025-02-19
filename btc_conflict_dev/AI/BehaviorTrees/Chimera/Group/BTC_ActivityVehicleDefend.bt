@@ -1,0 +1,356 @@
+BehaviorTree "{8ED3430293D16C93}AI/BehaviorTrees/Chimera/Group/BTC_ActivityVehicleDefend.bt" {
+ Name "AI/BehaviorTrees/Chimera/Group/BTC_ActivityVehicleDefend.bt"
+ Nodes {
+  RootNode Root {
+   Name "Root"
+   EditorPos 5088 -2224
+   Nodes {
+    Sequence Sequence {
+     Name "Sequence"
+     EditorPos 5088 -2096
+     Nodes {
+      Sequence Sequence {
+       Name "Sequence"
+       EditorPos 4368 -1760
+       Nodes {
+        AITaskSetVariable "Set Variable" {
+         Name "Set Variable"
+         EditorPos 2720 -1552
+         SetValue "true"
+         OutVariable 3
+        }
+        AITaskSetVariable "Set Variable" {
+         Name "Set Variable"
+         EditorPos 3232 -1552
+         SetValue "10"
+         OutVariable 8
+        }
+        AITaskSetVariable "Set Variable" {
+         Name "IDLE"
+         EditorPos 3760 -1552
+         SetValue "0"
+         OutVariable 4
+        }
+        AITaskSetVariable "Set Variable" {
+         Name "Set Variable"
+         EditorPos 4304 -1584
+         SetValue "50"
+         OutVariable 10
+        }
+       }
+      }
+      Repeater Repeater {
+       Name "Repeater"
+       EditorPos 5152 -1472
+       Nodes {
+        Sequence Sequence {
+         Name "Sequence"
+         EditorPos 5152 -1328
+         Nodes {
+          SCR_AIOnWaypointPropertiesChange "SCR_AI On Waypoint Properties Change" {
+           Name "SCR_AI On Waypoint Properties Change"
+           EditorPos 3344 -976
+           m_fTimeout_Base_ms 15000
+           m_fTimeout_Random_ms 100
+          }
+          BTC_AIGetVehicleDefendWaypointParameters "BTC_AI Get Vehicle Defend Waypoint Parameters" {
+           Name "BTC_AI Get Vehicle Defend Waypoint Parameters"
+           EditorPos 3824 -992
+           InPorts {
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "WaypointIn"
+            }
+           }
+           OutPorts {
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port 0
+             PortName "WaypointOut"
+            }
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port 2
+             PortName "Radius"
+            }
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port -1
+             PortName "Origin"
+            }
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port -1
+             PortName "PriorityLevel"
+            }
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port -1
+             PortName "HoldingTime"
+            }
+           }
+          }
+          SCR_AIGetRandomPointWithExclude "SCR_AI Get Random Point With Exclude" {
+           Name "SCR_AI Get Random Point With Exclude"
+           EditorPos 4816 -1008
+           InPorts {
+            SingleInputPortContainer SingleInputPortContainer {
+             Port 0
+             PortName "Entity"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "SearchCenter"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port 2
+             PortName "SearchRadius"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "ExclusionCenter"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "ExclusionRadius"
+            }
+           }
+           OutPorts {
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port 1
+             PortName "Position"
+            }
+           }
+           m_iIterationCount 50
+          }
+          Selector Selector {
+           Name "Selector"
+           EditorPos 6144 -1232
+           Nodes {
+            SCR_AIDecoIsEnemyWithinRadius "SCR_AI Deco Is Enemy Within Radius" {
+             Name "SCR_AI Deco Is Enemy Within Radius"
+             EditorPos 5696 -976
+             Nodes {
+              SCR_AISendGoalMessage_SeekAndDestroy "SCR_AI Send Goal Message_ Seek And Destroy" {
+               Name "SCR_AI Send Goal Message_ Seek And Destroy"
+               EditorPos 5664 -688
+               InPorts {
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port -1
+                 PortName "Receiver"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port 12
+                 PortName "PriorityLevel"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port -1
+                 PortName "IsWaypointRelated"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port -1
+                 PortName "FollowEntity"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port 13
+                 PortName "MovePosition"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port 14
+                 PortName "UseVehicles"
+                }
+               }
+               m_eMovementType RUN
+               m_bUseVehicles 1
+              }
+             }
+             InPorts {
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "WaypointIn"
+              }
+             }
+             OutPorts {
+              SingleOutputPortContainer SingleOutputPortContainer {
+               Port 11
+               PortName "LocationOut"
+              }
+             }
+             AbortType AbortChildrenBranchAndParentFurtherChildren
+            }
+            SCR_AIDecoIsEnemyWithinRadius "SCR_AI Deco Is Enemy Within Radius" {
+             Name "SCR_AI Deco Is Enemy Within Radius"
+             EditorPos 6512 -928
+             Nodes {
+              RunBT RunBT {
+               Name "RunBT"
+               EditorPos 6560 -624
+               InPorts {
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port 6
+                 PortName "useVehicles"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port 5
+                 PortName "moveLocation"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port 7
+                 PortName "movementType"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port -1
+                 PortName "moveEntity"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port -1
+                 PortName "priorityLevel"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port 9
+                 PortName "completionDistance"
+                }
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port -1
+                 PortName "isWaypointRelated"
+                }
+               }
+               BehaviorTree "{8DFBB40921A0BB33}AI/BehaviorTrees/Chimera/Group/BTC_ActivityVehicleDefendMove.bt"
+              }
+             }
+             InPorts {
+              SingleInputPortContainer SingleInputPortContainer {
+               Port -1
+               PortName "WaypointIn"
+              }
+             }
+             OutPorts {
+              SingleOutputPortContainer SingleOutputPortContainer {
+               Port -1
+               PortName "LocationOut"
+              }
+             }
+             NegativeCondition 1
+             AbortType AbortChildrenBranch
+            }
+           }
+          }
+         }
+        }
+       }
+       RepeatTimes -1
+      }
+     }
+    }
+   }
+  }
+ }
+ Variables {
+  Variable waypoint {
+   VariableName "waypoint"
+   VariableTypeName "AIWaypoint"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable movePos {
+   VariableName "movePos"
+   VariableTypeName "vector"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable waypointRadius {
+   VariableName "waypointRadius"
+   VariableTypeName "float"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable useVehicles {
+   VariableName "useVehicles"
+   VariableTypeName "bool"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable movementType {
+   VariableName "movementType"
+   VariableTypeName "int"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable enemyPos {
+   VariableName "enemyPos"
+   VariableTypeName "vector"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable completionDistance {
+   VariableName "completionDistance"
+   VariableTypeName "float"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable enemyEngagePriorityLevel {
+   VariableName "enemyEngagePriorityLevel"
+   VariableTypeName "float"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+ }
+ VariablesRefs {
+  VariableReference waypoint {
+   VariableType 0
+   EditorPos 4400 -1008
+   Group "{5C5ACDCFBB6EB794}"
+  }
+  VariableReference movePos {
+   VariableType 1
+   EditorPos 5248 -1040
+  }
+  VariableReference waypointRadius {
+   VariableType 2
+   EditorPos 4400 -880
+  }
+  VariableReference useVehicles {
+   VariableType 3
+   EditorPos 2976 -1408
+  }
+  VariableReference movementType {
+   VariableType 4
+   EditorPos 4048 -1424
+  }
+  VariableReference movePos {
+   VariableType 1
+   EditorPos 6304 -576
+  }
+  VariableReference useVehicles {
+   VariableType 3
+   EditorPos 6304 -672
+  }
+  VariableReference movementType {
+   VariableType 4
+   EditorPos 6288 -480
+  }
+  VariableReference completionDistance {
+   VariableType 6
+   EditorPos 3456 -1408
+  }
+  VariableReference completionDistance {
+   VariableType 6
+   EditorPos 6256 -384
+  }
+  VariableReference enemyEngagePriorityLevel {
+   VariableType 7
+   EditorPos 4544 -1440
+  }
+  VariableReference enemyPos {
+   VariableType 5
+   EditorPos 6096 -864
+  }
+  VariableReference enemyEngagePriorityLevel {
+   VariableType 7
+   EditorPos 5296 -640
+  }
+  VariableReference enemyPos {
+   VariableType 5
+   EditorPos 5328 -544
+  }
+  VariableReference useVehicles {
+   VariableType 3
+   EditorPos 5328 -432
+  }
+ }
+}

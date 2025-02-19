@@ -1,0 +1,279 @@
+BehaviorTree "{E8F97EB099EAD2DE}Scripts/Game/AI/BehaviorTrees/Chimera/Group/BTC_LookAtActivity.bt" {
+ Name "Scripts/Game/AI/BehaviorTrees/Chimera/Group/BTC_LookAtActivity.bt"
+ Nodes {
+  RootNode Root {
+   Name "Root"
+   EditorPos -54.333 -45
+   Nodes {
+    Selector Selector {
+     Name "Selector"
+     EditorPos -240 80
+     Nodes {
+      SCR_AIDecoIsEnemyWithinRadius "SCR_AI Deco Is Enemy Within Radius" {
+       Name "SCR_AI Deco Is Enemy Within Radius"
+       EditorPos -752 304
+       Nodes {
+        Sequence Sequence {
+         Name "Sequence"
+         EditorPos -656 560
+         Nodes {
+          SCR_AISendGoalMessage_Investigate "SCR_AI Send Goal Message_ Investigate" {
+           Name "SCR_AI Send Goal Message_ Investigate"
+           EditorPos -1152 736
+           InPorts {
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "Receiver"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "PriorityLevel"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "IsWaypointRelated"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "ObjectEntity"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port 3
+             PortName "MovePosition"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "Radius"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "IsDangerous"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "Duration"
+            }
+           }
+           m_fPriorityLevel 100
+           m_fRadius 20
+           m_bIsDangerous 1
+           m_fDuration 10
+          }
+          SCR_AIPrintDebug "SCR_AI Print Debug" {
+           Name "SCR_AI Print Debug"
+           EditorPos -720 736
+           InPorts {
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "DebugMessage"
+            }
+           }
+           m_sDebugMessage "Investigating enemy"
+          }
+          AITaskReturnState "Return State" {
+           Name "Return State"
+           EditorPos -448 736
+           Result RUNNING
+          }
+         }
+        }
+       }
+       InPorts {
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "WaypointIn"
+        }
+       }
+       OutPorts {
+        SingleOutputPortContainer SingleOutputPortContainer {
+         Port 2
+         PortName "LocationOut"
+        }
+       }
+       AbortType AbortChildrenBranch
+      }
+      Sequence Sequence {
+       Name "Sequence"
+       EditorPos 368 288
+       Nodes {
+        Sequence Sequence {
+         Name "Sequence"
+         EditorPos -224 592
+         Nodes {
+          SCR_AIGetWaypointParameters "SCR_AI Get Waypoint Parameters" {
+           Name "SCR_AI Get Waypoint Parameters"
+           EditorPos -704 1216
+           InPorts {
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "WaypointIn"
+            }
+           }
+           OutPorts {
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port -1
+             PortName "WaypointOut"
+            }
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port 5
+             PortName "Radius"
+            }
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port 1
+             PortName "Origin"
+            }
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port -1
+             PortName "PriorityLevel"
+            }
+           }
+          }
+          SCR_AIGetRandomPointWithExclude "SCR_AI Get Random Point With Exclude" {
+           Name "SCR_AI Get Random Point With Exclude"
+           EditorPos -112 1216
+           InPorts {
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "Entity"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port 1
+             PortName "SearchCenter"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port 5
+             PortName "SearchRadius"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "ExclusionCenter"
+            }
+            SingleInputPortContainer SingleInputPortContainer {
+             Port -1
+             PortName "ExclusionRadius"
+            }
+           }
+           OutPorts {
+            SingleOutputPortContainer SingleOutputPortContainer {
+             Port 0
+             PortName "Position"
+            }
+           }
+           m_fExcludeRadius 20
+          }
+         }
+        }
+        SCR_AISendGoalMessage_Move "SCR_AI Send Goal Message_ Move" {
+         Name "SCR_AI Send Goal Message_ Move"
+         EditorPos 304 560
+         InPorts {
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "Receiver"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "PriorityLevel"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "IsWaypointRelated"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "FollowEntity"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port 4
+           PortName "MovePosition"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "UseVehicles"
+          }
+         }
+         m_eMovementType WALK
+        }
+        SCR_AIPrintDebug "SCR_AI Print Debug" {
+         Name "SCR_AI Print Debug"
+         EditorPos 704 576
+         InPorts {
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "DebugMessage"
+          }
+         }
+         m_bIncludeMe 1
+         m_sDebugMessage "AI is moving"
+        }
+        AITaskIdle Idle {
+         Name "Idle"
+         EditorPos 928 576
+         Period 3
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Variables {
+  Variable member {
+   VariableName "member"
+   VariableTypeName "AIAgent"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable lookAtPos {
+   VariableName "lookAtPos"
+   VariableTypeName "vector"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable wpPos {
+   VariableName "wpPos"
+   VariableTypeName "vector"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable enemyPos {
+   VariableName "enemyPos"
+   VariableTypeName "vector"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable searchRadius {
+   VariableName "searchRadius"
+   VariableTypeName "float"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+ }
+ VariablesRefs {
+  VariableReference lookAtPos {
+   VariableType 1
+   EditorPos 272 1216
+  }
+  VariableReference wpPos {
+   VariableType 2
+   EditorPos -352 1360
+  }
+  VariableReference enemyPos {
+   VariableType 3
+   EditorPos -368 320
+  }
+  VariableReference enemyPos {
+   VariableType 3
+   EditorPos -1440 800
+  }
+  VariableReference lookAtPos {
+   VariableType 1
+   EditorPos 32 624
+  }
+  VariableReference searchRadius {
+   VariableType 4
+   EditorPos -368 1264
+  }
+ }
+}

@@ -1,0 +1,271 @@
+BehaviorTree "{8DFBB40921A0BB33}AI/BehaviorTrees/Chimera/Group/BTC_ActivityVehicleDefendMove.bt" {
+ Name "AI/BehaviorTrees/Chimera/Group/BTC_ActivityVehicleDefendMove.bt"
+ Nodes {
+  RootNode Root {
+   Name "Root"
+   EditorPos 438.833 -173.167
+   Nodes {
+    Sequence Sequence {
+     Name "Sequence"
+     EditorPos 424.333 86.5
+     Nodes {
+      AITaskResetPathfindingFilters "Reset Pathfinding Filters" {
+       Name "Reset Pathfinding Filters"
+       EditorPos -2192 496
+      }
+      AITaskSetVariable "Set Variable" {
+       Name "Set Variable"
+       EditorPos -1888 512
+       SetValue "1.0"
+       OutVariable 5
+      }
+      Selector Selector {
+       Name "Selector"
+       EditorPos -526.786 408.571
+       Nodes {
+        DecoTestVariable "Test Variable" {
+         Name "Test Variable"
+         EditorPos -767.477 540.143
+         Nodes {
+          DecoratorEntity Entity {
+           Name "Entity"
+           EditorPos -770.763 737.666
+           Nodes {
+            AITaskCreatePosition "Create Position" {
+             Name "Create Position"
+             EditorPos -796.31 904.38
+             InEntity 11
+             OutPosition 3
+            }
+           }
+           UseChildResult 1
+           ForceNodeResult None
+           InEntity 11
+           TEST {
+            DecoratorTestNotNull DecoratorTestNotNull {
+            }
+           }
+          }
+         }
+         NegativeCondition 1
+         UseChildResult 1
+         ForceNodeResult None
+         InVariable 10
+        }
+        DecoratorEntity Entity {
+         Name "Entity"
+         EditorPos -441.299 541.416
+         Nodes {
+          DecoTestVariable "Test Variable" {
+           Name "Test Variable"
+           EditorPos -413.727 736.393
+           Nodes {
+            Sequence Sequence {
+             Name "Sequence"
+             EditorPos -396.5 944.25
+             Nodes {
+              SCR_AIPrintDebug "SCR_AI Print Debug" {
+               Name "SCR_AI Print Debug"
+               EditorPos -493.75 1166.25
+               InPorts {
+                SingleInputPortContainer SingleInputPortContainer {
+                 Port -1
+                 PortName "DebugMessage"
+                }
+               }
+               m_bIncludeMe 1
+               m_sDebugMessage "Waypoint was completed and removed."
+              }
+              SCR_AICompleteAction "SCR_AI Complete Action" {
+               Name "SCR_AI Complete Action"
+               EditorPos -325.154 1164.773
+              }
+              AITaskReturnState "Return State" {
+               Name "Return State"
+               EditorPos -107.5 1167.5
+               Result RUNNING
+              }
+             }
+            }
+           }
+           NegativeCondition 1
+           UseChildResult 1
+           ForceNodeResult None
+           InVariable 10
+          }
+         }
+         NegativeCondition 1
+         UseChildResult 1
+         ForceNodeResult Success
+         InEntity 11
+         TEST {
+          DecoratorTestNotNull DecoratorTestNotNull {
+          }
+         }
+        }
+       }
+      }
+      AITaskGroupSetMovementSpeed "Group Set Movement Speed" {
+       Name "Group Set Movement Speed"
+       EditorPos -131.273 393.116
+       "Input Movement speed" 9
+      }
+      RunBT RunBT {
+       Name "RunBT"
+       EditorPos 264 515.333
+       InPorts {
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 1
+         PortName "useVehicle"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 4
+         PortName "priorityLevel"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 7
+         PortName "isWaypointRelated"
+        }
+       }
+       BehaviorTree "{E055E1CF546F788D}AI/BehaviorTrees/Chimera/Group/MovePlanning.bt"
+       InBehaviorTree -1
+      }
+      Sequence Sequence {
+       Name "Sequence"
+       EditorPos 1778.333 299.619
+       Nodes {
+        RunBT RunBT {
+         Name "RunBT"
+         EditorPos 1392 704
+         InPorts {
+          SingleInputPortContainer SingleInputPortContainer {
+           Port 2
+           PortName "moveLocation"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port 0
+           PortName "moveEntity"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port 6
+           PortName "completionDistance"
+          }
+         }
+         BehaviorTree "{820FDD01F3A3B202}AI/BehaviorTrees/Chimera/Group/BTC_MoveToLocation.bt"
+        }
+        DecoTestVariable "Test Variable" {
+         Name "Test Variable"
+         EditorPos 2112 672
+         Nodes {
+          SCR_AICompleteAction "SCR_AI Complete Action" {
+           Name "SCR_AI Complete Action"
+           EditorPos 2128 912
+          }
+         }
+         ForceNodeResult Success
+         InVariable 8
+         TestType EqualsValue
+         TestValue "false"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Variables {
+  Variable useVehicles {
+   VariableName "useVehicles"
+   VariableTypeName "bool"
+   VariableExposedInput 1
+   VariableExposedOutput 0
+  }
+  Variable moveLocation {
+   VariableName "moveLocation"
+   VariableTypeName "vector"
+   VariableExposedInput 1
+   VariableExposedOutput 0
+  }
+  Variable movementType {
+   VariableName "movementType"
+   VariableTypeName "int"
+   VariableExposedInput 1
+   VariableExposedOutput 0
+  }
+  Variable moveEntity {
+   VariableName "moveEntity"
+   VariableTypeName "IEntity"
+   VariableExposedInput 1
+   VariableExposedOutput 0
+  }
+  Variable priorityLevel {
+   VariableName "priorityLevel"
+   VariableTypeName "float"
+   VariableExposedInput 1
+   VariableExposedOutput 0
+  }
+  Variable completionDistance {
+   VariableName "completionDistance"
+   VariableTypeName "float"
+   VariableExposedInput 1
+   VariableExposedOutput 0
+  }
+  Variable isWaypointRelated {
+   VariableName "isWaypointRelated"
+   VariableTypeName "bool"
+   VariableExposedInput 1
+   VariableExposedOutput 0
+  }
+ }
+ VariablesRefs {
+  VariableReference moveEntity {
+   VariableType 3
+   EditorPos 1152 752
+  }
+  VariableReference useVehicles {
+   VariableType 0
+   EditorPos 52.464 614.404
+  }
+  VariableReference moveLocation {
+   VariableType 1
+   EditorPos 1152 656
+  }
+  VariableReference moveLocation {
+   VariableType 1
+   EditorPos -653.667 1073.484
+  }
+  VariableReference priorityLevel {
+   VariableType 4
+   EditorPos 36.008 689.944
+  }
+  VariableReference completionDistance {
+   VariableType 5
+   EditorPos -1680 672
+  }
+  VariableReference completionDistance {
+   VariableType 5
+   EditorPos 1120 864
+  }
+  VariableReference isWaypointRelated {
+   VariableType 6
+   EditorPos 12.273 775.242
+  }
+  VariableReference isWaypointRelated {
+   VariableType 6
+   EditorPos 1856 752
+  }
+  VariableReference movementType {
+   VariableType 2
+   EditorPos -128 512
+  }
+  VariableReference moveLocation {
+   VariableType 1
+   EditorPos -1084.444 675.556
+  }
+  VariableReference moveEntity {
+   VariableType 3
+   EditorPos -1072 768
+  }
+ }
+}

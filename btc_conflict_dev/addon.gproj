@@ -7,7 +7,11 @@ GameProject {
  }
  Configurations {
   GameProjectConfig PC {
-   WetnessRenderSettings WetnessRenderSettings "{644D0D09F02545DB}" {
+   ScriptProjectManagerSettings ScriptProjectManagerSettings "{AC4BE58770485E4B}" {
+    Configurations {
+     ScriptConfigurationClass pc {
+     }
+    }
    }
   }
   GameProjectConfig XBOX_ONE {

@@ -14,6 +14,7 @@ class BTC_TreeNode
 	protected int m_iID = 0;
 	protected BTC_TreeNode m_Parent;
 	protected int m_iParentID = -1;
+	protected BTC_TreeNode m_Root;
 	protected ref array<ref BTC_TreeNode> m_aChildren = {};
 	protected ref ScriptInvokerOnNodeInserted m_OnNodeInserted;
 	protected ref ScriptInvokerOnNodeRemoved m_OnNodeRemoved;
@@ -93,6 +94,9 @@ class BTC_TreeNode
 		node.m_Parent = this;
 		node.m_iLevel = this.m_iLevel + 1;
 		node.m_iParentID = this.m_iID;
+
+		if (m_Root)
+			node.m_Root = this.m_Root;
 
 		if (m_OnNodeInserted)
 		{
@@ -215,19 +219,15 @@ class BTC_TreeNode
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Traverses the hierarchy backwards to reach root node
 	BTC_TreeNode GetRoot()
 	{
-		BTC_TreeNode root = this;
-		while (root)
-		{
-			if (root.GetParent()) //check if traversing node's parent exists
-				root = root.GetParent();
-			else
-				return root;
-		}
+		return m_Root;
+	}
 
-		return null; //root variable became null during while loop
+	//------------------------------------------------------------------------------------------------
+	void SetRoot(BTC_TreeNode node)
+	{
+		m_Root = node;
 	}
 
 	//------------------------------------------------------------------------------------------------
